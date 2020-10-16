@@ -12,7 +12,7 @@ namespace SoftwareEngineeringApp
 {
     public partial class Form1 : Form
     {
-        
+        Dictionary<string, int> highscores = new Dictionary<string, int>();
 
         public Form1()
         {
@@ -22,15 +22,32 @@ namespace SoftwareEngineeringApp
         private void usernameButton_Click(object sender, EventArgs e)
         {
             string usernameEntered = usernameTextBox.Text;
-
+            AddUsernameToDictionary(usernameEntered);
 
             usernameLabel.Hide();
             usernameTextBox.Hide();
             usernameButton.Hide();
 
-            highScoresListBox.Items.Add(usernameEntered);
-            //highScoresListBox.Items.AddRange(new object[] { usernameEntered, 25 });
+            foreach(var usernameHighscore in highscores)
+            {
+                highScoresListBox.Items.AddRange(new object[] { usernameHighscore.Key, usernameHighscore.Value });
+            }
             highScoresListBox.Show();
+        }
+
+        private void AddUsernameToDictionary(string username)
+        {
+            bool oldUser;
+            oldUser = highscores.ContainsKey(username);
+
+            if (oldUser)
+            {
+                highscores[username] = 0;
+            }
+            else
+            {
+                highscores.Add(username, 0);
+            }
         }
     }
 }
