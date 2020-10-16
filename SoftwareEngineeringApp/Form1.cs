@@ -12,6 +12,8 @@ namespace SoftwareEngineeringApp
 {
     public partial class Form1 : Form
     {
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +27,10 @@ namespace SoftwareEngineeringApp
             usernameLabel.Hide();
             usernameTextBox.Hide();
             usernameButton.Hide();
+
+            highScoresListBox.Items.Add(usernameEntered);
+            //highScoresListBox.Items.AddRange(new object[] { usernameEntered, 25 });
+            highScoresListBox.Show();
         }
     }
 }

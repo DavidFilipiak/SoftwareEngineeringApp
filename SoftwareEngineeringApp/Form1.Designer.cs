@@ -69,6 +69,7 @@
             this.highScoresListBox.Name = "highScoresListBox";
             this.highScoresListBox.Size = new System.Drawing.Size(146, 244);
             this.highScoresListBox.TabIndex = 4;
+            this.highScoresListBox.Visible = false;
             // 
             // Form1
             // 
