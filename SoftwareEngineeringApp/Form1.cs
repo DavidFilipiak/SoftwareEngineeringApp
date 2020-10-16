@@ -16,5 +16,18 @@ namespace SoftwareEngineeringApp
         {
             InitializeComponent();
         }
+
+        private void usernameButton_Click(object sender, EventArgs e)
+        {
+            string usernameEntered = usernameTextBox.Text;
+
+
+
+
+
+            usernameLabel.Hide();
+            usernameTextBox.Hide();
+            usernameButton.Hide();
+        }
     }
 }

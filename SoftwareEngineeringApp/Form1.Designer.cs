@@ -57,6 +57,7 @@
             this.usernameButton.TabIndex = 3;
             this.usernameButton.Text = "button1";
             this.usernameButton.UseVisualStyleBackColor = true;
+            this.usernameButton.Click += new System.EventHandler(this.usernameButton_Click);
             // 
             // Form1
             // 
