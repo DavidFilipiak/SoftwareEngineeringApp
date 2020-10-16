@@ -17,6 +17,8 @@ namespace SoftwareEngineeringApp
         public Form1()
         {
             InitializeComponent();
+
+            ReadHighScoresFromFile(); //needs implementation
         }
 
         private void usernameButton_Click(object sender, EventArgs e)
@@ -40,6 +42,8 @@ namespace SoftwareEngineeringApp
             bool oldUser;
             oldUser = highscores.ContainsKey(username);
 
+            //message box for confirming user with previously entered username
+
             if (oldUser)
             {
                 highscores[username] = 0;
@@ -48,6 +52,11 @@ namespace SoftwareEngineeringApp
             {
                 highscores.Add(username, 0);
             }
+        }
+
+        private void ReadHighScoresFromFile()
+        {
+            //this will read highscores from either .txt or .dat file and put them in the highscores directory
         }
     }
 }
