@@ -31,6 +31,7 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameButton = new System.Windows.Forms.Button();
+            this.highScoresListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -59,11 +60,22 @@
             this.usernameButton.UseVisualStyleBackColor = true;
             this.usernameButton.Click += new System.EventHandler(this.usernameButton_Click);
             // 
+            // highScoresListBox
+            // 
+            this.highScoresListBox.FormattingEnabled = true;
+            this.highScoresListBox.ItemHeight = 16;
+            this.highScoresListBox.Location = new System.Drawing.Point(629, 27);
+            this.highScoresListBox.MultiColumn = true;
+            this.highScoresListBox.Name = "highScoresListBox";
+            this.highScoresListBox.Size = new System.Drawing.Size(146, 244);
+            this.highScoresListBox.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.highScoresListBox);
             this.Controls.Add(this.usernameButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLabel);
@@ -79,6 +91,7 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Button usernameButton;
+        private System.Windows.Forms.ListBox highScoresListBox;
     }
 }
 

@@ -22,9 +22,6 @@ namespace SoftwareEngineeringApp
             string usernameEntered = usernameTextBox.Text;
 
 
-
-
-
             usernameLabel.Hide();
             usernameTextBox.Hide();
             usernameButton.Hide();
