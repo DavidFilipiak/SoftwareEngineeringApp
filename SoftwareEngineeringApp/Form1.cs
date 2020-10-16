@@ -17,6 +17,7 @@ namespace SoftwareEngineeringApp
         public Form1()
         {
             InitializeComponent();
+            highscores.Add("david", 0);
 
             ReadHighScoresFromFile(); //needs implementation
         }
@@ -24,34 +25,48 @@ namespace SoftwareEngineeringApp
         private void usernameButton_Click(object sender, EventArgs e)
         {
             string usernameEntered = usernameTextBox.Text;
-            AddUsernameToDictionary(usernameEntered);
-
-            usernameLabel.Hide();
-            usernameTextBox.Hide();
-            usernameButton.Hide();
-
-            foreach(var usernameHighscore in highscores)
+            if (AddUsernameToDictionary(usernameEntered))
             {
-                highScoresListBox.Items.AddRange(new object[] { usernameHighscore.Key, usernameHighscore.Value });
+                ContinueToMainWindow();
             }
-            highScoresListBox.Show();
         }
 
-        private void AddUsernameToDictionary(string username)
+        private bool AddUsernameToDictionary(string username)
         {
             bool oldUser;
             oldUser = highscores.ContainsKey(username);
 
-            //message box for confirming user with previously entered username
-
             if (oldUser)
             {
-                highscores[username] = 0;
+                DialogResult result = MessageBox.Show("The user with entered username already exists. Continuing will overwrite the saved data.\nDo you want to continue?", "Existing User", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    highscores[username] = 0;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
                 highscores.Add(username, 0);
             }
+            return true;
+        }
+
+        private void ContinueToMainWindow()
+        {
+            usernameLabel.Hide();
+            usernameTextBox.Hide();
+            usernameButton.Hide();
+
+            foreach (var usernameHighscore in highscores)
+            {
+                highScoresListBox.Items.AddRange(new object[] { usernameHighscore.Key, usernameHighscore.Value });
+            }
+            highScoresListBox.Show();
         }
 
         private void ReadHighScoresFromFile()
