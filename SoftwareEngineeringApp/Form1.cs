@@ -17,7 +17,7 @@ namespace SoftwareEngineeringApp
         public Form1()
         {
             InitializeComponent();
-            highscores.Add("david", 0);
+            highscores.Add("david", 0); // line for testing
 
             ReadHighScoresFromFile(); //needs implementation
         }
@@ -36,6 +36,7 @@ namespace SoftwareEngineeringApp
             bool oldUser;
             oldUser = highscores.ContainsKey(username);
 
+            //checks if the username already exists, and if yes, asks if the user wants to rewrite the existing score
             if (oldUser)
             {
                 DialogResult result = MessageBox.Show("The user with entered username already exists. Continuing will overwrite the saved data.\nDo you want to continue?", "Existing User", MessageBoxButtons.YesNo);
@@ -62,6 +63,7 @@ namespace SoftwareEngineeringApp
             usernameTextBox.Hide();
             usernameButton.Hide();
 
+            //displays all scores in the highscores dictionary
             foreach (var usernameHighscore in highscores)
             {
                 highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);

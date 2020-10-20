@@ -62,6 +62,7 @@
             // 
             // highScores_listBox
             // 
+            this.highScores_listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.highScores_listBox.FormattingEnabled = true;
             this.highScores_listBox.ItemHeight = 16;
             this.highScores_listBox.Location = new System.Drawing.Point(565, 74);
