@@ -64,9 +64,9 @@ namespace SoftwareEngineeringApp
 
             foreach (var usernameHighscore in highscores)
             {
-                highScoresListBox.Items.AddRange(new object[] { usernameHighscore.Key, usernameHighscore.Value });
+                highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
             }
-            highScoresListBox.Show();
+            highScores_listBox.Show();
         }
 
         private void ReadHighScoresFromFile()

@@ -31,7 +31,7 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameButton = new System.Windows.Forms.Button();
-            this.highScoresListBox = new System.Windows.Forms.ListBox();
+            this.highScores_listBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -60,23 +60,22 @@
             this.usernameButton.UseVisualStyleBackColor = true;
             this.usernameButton.Click += new System.EventHandler(this.usernameButton_Click);
             // 
-            // highScoresListBox
+            // highScores_listBox
             // 
-            this.highScoresListBox.FormattingEnabled = true;
-            this.highScoresListBox.ItemHeight = 16;
-            this.highScoresListBox.Location = new System.Drawing.Point(629, 27);
-            this.highScoresListBox.MultiColumn = true;
-            this.highScoresListBox.Name = "highScoresListBox";
-            this.highScoresListBox.Size = new System.Drawing.Size(146, 244);
-            this.highScoresListBox.TabIndex = 4;
-            this.highScoresListBox.Visible = false;
+            this.highScores_listBox.FormattingEnabled = true;
+            this.highScores_listBox.ItemHeight = 16;
+            this.highScores_listBox.Location = new System.Drawing.Point(565, 74);
+            this.highScores_listBox.Name = "highScores_listBox";
+            this.highScores_listBox.Size = new System.Drawing.Size(196, 228);
+            this.highScores_listBox.TabIndex = 4;
+            this.highScores_listBox.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.highScoresListBox);
+            this.Controls.Add(this.highScores_listBox);
             this.Controls.Add(this.usernameButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLabel);
@@ -92,7 +91,7 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Button usernameButton;
-        private System.Windows.Forms.ListBox highScoresListBox;
+        private System.Windows.Forms.ListBox highScores_listBox;
     }
 }
 
