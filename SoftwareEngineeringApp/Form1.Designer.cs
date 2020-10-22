@@ -52,11 +52,11 @@
             // 
             // usernameButton
             // 
-            this.usernameButton.Location = new System.Drawing.Point(293, 284);
+            this.usernameButton.Location = new System.Drawing.Point(281, 284);
             this.usernameButton.Name = "usernameButton";
-            this.usernameButton.Size = new System.Drawing.Size(136, 34);
+            this.usernameButton.Size = new System.Drawing.Size(157, 34);
             this.usernameButton.TabIndex = 3;
-            this.usernameButton.Text = "button1";
+            this.usernameButton.Text = "Enter the username";
             this.usernameButton.UseVisualStyleBackColor = true;
             this.usernameButton.Click += new System.EventHandler(this.usernameButton_Click);
             // 
