@@ -63,8 +63,10 @@ namespace SoftwareEngineeringApp
             usernameTextBox.Hide();
             usernameButton.Hide();
 
-            //displays all scores in the highscores dictionary
-            foreach (var usernameHighscore in highscores)
+            //displays all scores in the highscores dictionary sorted from highest to lowest (to be added, below is the link). 
+            //The link to the the source of the solution:
+            //https://www.c-sharpcorner.com/UploadFile/mahesh/sort-a-dictionary-by-value-in-C-Sharp/
+            foreach (var usernameHighscore in highscores)  
             {
                 highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
             }
