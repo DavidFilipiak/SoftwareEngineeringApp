@@ -22,6 +22,8 @@ namespace SoftwareEngineeringApp
             Quiz.LoadHighScoresFromFile();
             this.highscores = Quiz.highscores;
 
+            Quiz.questionsLvl1.Add(new Question("How are you", "good", "very good", "excellent", "bad", 'D'));
+
             ReadHighScoresFromFile(); //needs implementation
         }
 
@@ -79,6 +81,12 @@ namespace SoftwareEngineeringApp
         private void ReadHighScoresFromFile()
         {
             //this will read highscores from either .txt or .dat file and put them in the highscores directory
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QuestionScreen qs = new QuestionScreen();
+            qs.ShowDialog();
         }
     }
 }

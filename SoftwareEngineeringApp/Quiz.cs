@@ -33,8 +33,8 @@ namespace SoftwareEngineeringApp
         public static void LoadQuestionsFromFile()
         {
             //code for loading
-
-            string text = Properties.Resources.Questions; //to be uploaded
+            string text = " ";
+            //string text = Properties.Resources.Questions; //to be uploaded
             //these data will be loaded from file;
             string[] questions = text.Split('*');
             foreach(string q in questions)

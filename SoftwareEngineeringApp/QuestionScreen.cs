@@ -14,6 +14,7 @@ namespace SoftwareEngineeringApp
     {
         private static int questionNumber = 1;
         private static int difficulty; //data type can be changed
+        private static int time = 20;
         Question currentQuestion;
      
 
@@ -21,11 +22,17 @@ namespace SoftwareEngineeringApp
         {
             InitializeComponent();
 
-            DisplayQuestion(difficulty);
+            DisplayQuestion(1);
+
+            timer.Interval = 1000;
+            timer.Start();
+
         }
 
         private void DisplayQuestion(int difficulty)
         {
+            SetTimerTime(20);
+
             switch(difficulty)
             {
                 case 1:
@@ -57,6 +64,11 @@ namespace SoftwareEngineeringApp
             return questionList[randomPos];
         }
 
+        private void SetTimerTime(int seconds)
+        {
+            time = seconds;
+        }
+
         private void optionA_button_Click(object sender, EventArgs e)
         {
             //evaluate answer
@@ -75,6 +87,28 @@ namespace SoftwareEngineeringApp
         private void optionD_button_Click(object sender, EventArgs e)
         {
             //evaluate answer
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            time--;
+            timer_label.Text = time.ToString();
+
+            if(time == 0)
+            {
+                timer.Stop();
+                AnsweredIncorrectly();
+            }
+        }
+
+        private void AnsweredIncorrectly()
+        {
+            //needs implementation
+        }
+
+        private void AnsweredCorrectly()
+        {
+            //needs implementation
         }
     }
 }

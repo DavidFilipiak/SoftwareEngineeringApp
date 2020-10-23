@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.optionA_button = new System.Windows.Forms.Button();
             this.optionB_button = new System.Windows.Forms.Button();
             this.optionC_button = new System.Windows.Forms.Button();
             this.optionD_button = new System.Windows.Forms.Button();
             this.question_label = new System.Windows.Forms.Label();
             this.questionNumber_label = new System.Windows.Forms.Label();
+            this.timer_label = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // optionA_button
@@ -94,11 +97,25 @@
             this.questionNumber_label.TabIndex = 5;
             this.questionNumber_label.Text = "label1";
             // 
+            // timer_label
+            // 
+            this.timer_label.AutoSize = true;
+            this.timer_label.Location = new System.Drawing.Point(745, 13);
+            this.timer_label.Name = "timer_label";
+            this.timer_label.Size = new System.Drawing.Size(24, 17);
+            this.timer_label.TabIndex = 6;
+            this.timer_label.Text = "20";
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // QuestionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.timer_label);
             this.Controls.Add(this.questionNumber_label);
             this.Controls.Add(this.question_label);
             this.Controls.Add(this.optionD_button);
@@ -120,5 +137,7 @@
         private System.Windows.Forms.Button optionD_button;
         private System.Windows.Forms.Label question_label;
         private System.Windows.Forms.Label questionNumber_label;
+        private System.Windows.Forms.Label timer_label;
+        private System.Windows.Forms.Timer timer;
     }
 }
