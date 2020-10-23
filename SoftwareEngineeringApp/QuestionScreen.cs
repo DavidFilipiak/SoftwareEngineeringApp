@@ -22,16 +22,15 @@ namespace SoftwareEngineeringApp
         {
             InitializeComponent();
 
-            DisplayQuestion(1);
-
             timer.Interval = 1000;
-            timer.Start();
+            DisplayQuestion(1);
 
         }
 
         private void DisplayQuestion(int difficulty)
         {
-            SetTimerTime(20);
+            SetTimer(20);
+            timer.Start();
 
             switch(difficulty)
             {
@@ -64,7 +63,7 @@ namespace SoftwareEngineeringApp
             return questionList[randomPos];
         }
 
-        private void SetTimerTime(int seconds)
+        private void SetTimer(int seconds)
         {
             time = seconds;
         }
@@ -96,19 +95,20 @@ namespace SoftwareEngineeringApp
 
             if(time == 0)
             {
-                timer.Stop();
                 AnsweredIncorrectly();
             }
         }
 
         private void AnsweredIncorrectly()
         {
-            //needs implementation
+            timer.Stop();
+            this.Close();
         }
 
         private void AnsweredCorrectly()
         {
-            //needs implementation
+            timer.Stop();
+            DisplayQuestion(1);  //needs further implementation
         }
     }
 }
