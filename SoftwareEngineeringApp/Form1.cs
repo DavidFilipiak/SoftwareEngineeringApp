@@ -77,5 +77,11 @@ namespace SoftwareEngineeringApp
         {
             //this will read highscores from either .txt or .dat file and put them in the highscores directory
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var m = new helpScreen();
+            m.Show();
+        }
     }
 }
