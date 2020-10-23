@@ -117,4 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Each game will have 3 HelpLines:
+
+50/50 - Remove two incorrect answers from the choices.
+
+Skip - Skip the current question.
+
+Alternative question - replace the current question with a new question.
+
+</value>
+  </data>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>Navigate through the menus using the mouse and keyboard.
+
+When the game starts the user will be presented with a question and 4 potential answers.
+
+You must select the answer you think is correct and hit submit within the given timelimit.
+
+If you answer incorrectly you will proceed to the next question.
+
+If you answer incorrect you will lose.
+
+If you run out of time you will lose.
+
+</value>
+  </data>
 </root>
