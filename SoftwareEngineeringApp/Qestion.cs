@@ -30,11 +30,6 @@ namespace SoftwareEngineeringApp
             set { this.correctAnswer = value; }
         }
 
-        public Question()
-        {
-
-        }
-
         public Question(string question, string[] options, char correctAnswer)
         {
             this.QuestionWording = question;
