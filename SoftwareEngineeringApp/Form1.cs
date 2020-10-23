@@ -12,12 +12,15 @@ namespace SoftwareEngineeringApp
 {
     public partial class Form1 : Form
     {
-        Dictionary<string, int> highscores = new Dictionary<string, int>();
+        Dictionary<string, int> highscores;
 
         public Form1()
         {
             InitializeComponent();
-            highscores.Add("david", 0); // line for testing
+            //highscores.Add("david", 0); // line for testing
+
+            Quiz.LoadHighScoresFromFile();
+            this.highscores = Quiz.highscores;
 
             ReadHighScoresFromFile(); //needs implementation
         }

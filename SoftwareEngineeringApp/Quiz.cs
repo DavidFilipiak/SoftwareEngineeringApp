@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
+using System.IO;
 
 namespace SoftwareEngineeringApp
 {
@@ -19,7 +21,13 @@ namespace SoftwareEngineeringApp
 
         public static void LoadHighScoresFromFile()
         {
-
+            string text = Properties.Resources.highscores;
+            string[] lines = text.Split('\r');
+            foreach(string line in lines)
+            {
+                string[] pair = line.Split(' ');
+                highscores.Add(pair[0], int.Parse(pair[1]));
+            }
         }
 
         public static void LoadQuestionsFromFile()
