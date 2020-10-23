@@ -42,6 +42,17 @@ namespace SoftwareEngineeringApp
             this.CorrectAnswer = correctAnswer;
         }
 
+        public Question(string question, string option1, string option2, string option3, string option4, char correctAnswer)
+        {
+            this.QuestionWording = question;
+            this.Options = new string[4];
+            this.Options[0] = option1;
+            this.Options[1] = option2;
+            this.Options[2] = option3;
+            this.Options[3] = option4;
+            this.CorrectAnswer = correctAnswer;
+        }
+
         public bool CheckAnswer(char givenAnswerNumber)
         {
             if (givenAnswerNumber == correctAnswer)
