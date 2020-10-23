@@ -42,7 +42,12 @@ namespace SoftwareEngineeringApp
                     break;
             }
 
-
+            questionNumber_label.Text = questionNumber.ToString();
+            question_label.Text = currentQuestion.QuestionWording;
+            optionA_button.Text = currentQuestion.Options[0];
+            optionB_button.Text = currentQuestion.Options[1];
+            optionC_button.Text = currentQuestion.Options[2];
+            optionD_button.Text = currentQuestion.Options[3];
         }
 
         private Question GetRandomQuestion(List<Question> questionList)
@@ -50,6 +55,26 @@ namespace SoftwareEngineeringApp
             Random random = new Random();
             int randomPos = random.Next(0, questionList.Count);
             return questionList[randomPos];
+        }
+
+        private void optionA_button_Click(object sender, EventArgs e)
+        {
+            //evaluate answer
+        }
+
+        private void optionB_button_Click(object sender, EventArgs e)
+        {
+            //evaluate answer
+        }
+
+        private void optionC_button_Click(object sender, EventArgs e)
+        {
+            //evaluate answer
+        }
+
+        private void optionD_button_Click(object sender, EventArgs e)
+        {
+            //evaluate answer
         }
     }
 }

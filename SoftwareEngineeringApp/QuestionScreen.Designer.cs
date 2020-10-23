@@ -28,68 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.optionA_button = new System.Windows.Forms.Button();
+            this.optionB_button = new System.Windows.Forms.Button();
+            this.optionC_button = new System.Windows.Forms.Button();
+            this.optionD_button = new System.Windows.Forms.Button();
+            this.question_label = new System.Windows.Forms.Label();
+            this.questionNumber_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // optionA_button
             // 
-            this.button1.Location = new System.Drawing.Point(24, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 100);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.optionA_button.Location = new System.Drawing.Point(24, 197);
+            this.optionA_button.Name = "optionA_button";
+            this.optionA_button.Size = new System.Drawing.Size(230, 100);
+            this.optionA_button.TabIndex = 0;
+            this.optionA_button.Text = "button1";
+            this.optionA_button.UseVisualStyleBackColor = true;
+            this.optionA_button.Click += new System.EventHandler(this.optionA_button_Click);
             // 
-            // button2
+            // optionB_button
             // 
-            this.button2.Location = new System.Drawing.Point(24, 313);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 112);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.optionB_button.Location = new System.Drawing.Point(472, 191);
+            this.optionB_button.Name = "optionB_button";
+            this.optionB_button.Size = new System.Drawing.Size(230, 112);
+            this.optionB_button.TabIndex = 1;
+            this.optionB_button.Text = "button2";
+            this.optionB_button.UseVisualStyleBackColor = true;
+            this.optionB_button.Click += new System.EventHandler(this.optionB_button_Click);
             // 
-            // button3
+            // optionC_button
             // 
-            this.button3.Location = new System.Drawing.Point(472, 197);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 100);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.optionC_button.Location = new System.Drawing.Point(24, 322);
+            this.optionC_button.Name = "optionC_button";
+            this.optionC_button.Size = new System.Drawing.Size(236, 100);
+            this.optionC_button.TabIndex = 2;
+            this.optionC_button.Text = "button3";
+            this.optionC_button.UseVisualStyleBackColor = true;
+            this.optionC_button.Click += new System.EventHandler(this.optionC_button_Click);
             // 
-            // button4
+            // optionD_button
             // 
-            this.button4.Location = new System.Drawing.Point(472, 322);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(236, 103);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.optionD_button.Location = new System.Drawing.Point(472, 322);
+            this.optionD_button.Name = "optionD_button";
+            this.optionD_button.Size = new System.Drawing.Size(236, 103);
+            this.optionD_button.TabIndex = 3;
+            this.optionD_button.Text = "button4";
+            this.optionD_button.UseVisualStyleBackColor = true;
+            this.optionD_button.Click += new System.EventHandler(this.optionD_button_Click);
             // 
-            // label1
+            // question_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(346, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.question_label.AutoSize = true;
+            this.question_label.Location = new System.Drawing.Point(346, 117);
+            this.question_label.Name = "question_label";
+            this.question_label.Size = new System.Drawing.Size(46, 17);
+            this.question_label.TabIndex = 4;
+            this.question_label.Text = "label1";
+            // 
+            // questionNumber_label
+            // 
+            this.questionNumber_label.AutoSize = true;
+            this.questionNumber_label.Location = new System.Drawing.Point(13, 13);
+            this.questionNumber_label.Name = "questionNumber_label";
+            this.questionNumber_label.Size = new System.Drawing.Size(46, 17);
+            this.questionNumber_label.TabIndex = 5;
+            this.questionNumber_label.Text = "label1";
             // 
             // QuestionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.questionNumber_label);
+            this.Controls.Add(this.question_label);
+            this.Controls.Add(this.optionD_button);
+            this.Controls.Add(this.optionC_button);
+            this.Controls.Add(this.optionB_button);
+            this.Controls.Add(this.optionA_button);
             this.Name = "QuestionScreen";
             this.Text = "QuestionScreen";
             this.ResumeLayout(false);
@@ -99,10 +114,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button optionA_button;
+        private System.Windows.Forms.Button optionB_button;
+        private System.Windows.Forms.Button optionC_button;
+        private System.Windows.Forms.Button optionD_button;
+        private System.Windows.Forms.Label question_label;
+        private System.Windows.Forms.Label questionNumber_label;
     }
 }
