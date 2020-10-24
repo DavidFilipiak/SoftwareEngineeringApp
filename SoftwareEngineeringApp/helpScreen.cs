@@ -39,7 +39,7 @@ namespace SoftwareEngineeringApp
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox1.BackColor = Color.Transparent;
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -48,6 +48,11 @@ namespace SoftwareEngineeringApp
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
