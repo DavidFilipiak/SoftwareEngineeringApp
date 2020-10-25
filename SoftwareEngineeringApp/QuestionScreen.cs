@@ -13,7 +13,7 @@ namespace SoftwareEngineeringApp
     public partial class QuestionScreen : Form
     {
         private static int questionNumber = 1;
-        private static int difficulty; //data type can be changed
+        //private static int difficulty; //data type can be changed
         private static int time = 20;
         Question currentQuestion;
      

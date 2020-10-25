@@ -59,5 +59,15 @@ namespace SoftwareEngineeringApp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to david 15
+        ///moon 35.
+        /// </summary>
+        internal static string highscores {
+            get {
+                return ResourceManager.GetString("highscores", resourceCulture);
+            }
+        }
     }
 }
