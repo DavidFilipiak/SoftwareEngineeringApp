@@ -76,6 +76,7 @@ namespace SoftwareEngineeringApp
                 highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
             }
             highScores_listBox.Show();
+            play_button.Show();
         }
 
         private void ReadHighScoresFromFile()
@@ -83,16 +84,16 @@ namespace SoftwareEngineeringApp
             //this will read highscores from either .txt or .dat file and put them in the highscores directory
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            QuestionScreen qs = new QuestionScreen();
-            qs.ShowDialog();
-        }
-
         private void helpButton_Click(object sender, EventArgs e)
         {
             var m = new helpScreen();
             m.Show();
+        }
+
+        private void play_button_Click(object sender, EventArgs e)
+        {
+            QuestionScreen qs = new QuestionScreen();
+            qs.ShowDialog();
         }
     }
 }

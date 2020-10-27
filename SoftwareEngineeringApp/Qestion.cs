@@ -48,14 +48,10 @@ namespace SoftwareEngineeringApp
             this.CorrectAnswer = correctAnswer;
         }
 
-        public bool CheckAnswer(char givenAnswerNumber)
+        /*public bool CheckAnswer(char givenAnswerNumber)
         {
-            if (givenAnswerNumber == correctAnswer)
-            {
-                return true;
-            }
-            else return false;
-        }
+
+        }*/
     }
 
 

@@ -33,6 +33,7 @@
             this.usernameButton = new System.Windows.Forms.Button();
             this.highScores_listBox = new System.Windows.Forms.ListBox();
             this.helpButton = new System.Windows.Forms.Button();
+            this.play_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -78,7 +79,7 @@
             // helpButton
             // 
             this.helpButton.Location = new System.Drawing.Point(16, 15);
-            this.helpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.helpButton.Margin = new System.Windows.Forms.Padding(4);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(115, 34);
             this.helpButton.TabIndex = 5;
@@ -86,12 +87,24 @@
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
+            // play_button
+            // 
+            this.play_button.Location = new System.Drawing.Point(582, 374);
+            this.play_button.Name = "play_button";
+            this.play_button.Size = new System.Drawing.Size(120, 52);
+            this.play_button.TabIndex = 6;
+            this.play_button.Text = "Play";
+            this.play_button.UseVisualStyleBackColor = true;
+            this.play_button.Visible = false;
+            this.play_button.Click += new System.EventHandler(this.play_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background___Title;
             this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.Controls.Add(this.play_button);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.highScores_listBox);
             this.Controls.Add(this.usernameButton);
@@ -112,6 +125,7 @@
         private System.Windows.Forms.Button usernameButton;
         private System.Windows.Forms.ListBox highScores_listBox;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Button play_button;
     }
 }
 
