@@ -13,6 +13,7 @@ namespace SoftwareEngineeringApp
     public partial class QuestionScreen : Form
     {
         private static int questionNumber = 1;
+        private int userScore = 0;
         //private static int difficulty; //data type can be changed
         private static int time = 20;
         Question currentQuestion;
@@ -21,7 +22,7 @@ namespace SoftwareEngineeringApp
         public QuestionScreen()
         {
             InitializeComponent();
-
+            userScore = 0;
             timer.Interval = 1000;
             DisplayQuestion(1);
 
@@ -59,6 +60,8 @@ namespace SoftwareEngineeringApp
             optionB_button.Text = currentQuestion.Options[1];
             optionC_button.Text = currentQuestion.Options[2];
             optionD_button.Text = currentQuestion.Options[3];
+
+            score_label.Text = "Score: " + userScore.ToString();
         }
 
         private Question GetRandomQuestion(List<Question> questionList)
@@ -113,6 +116,7 @@ namespace SoftwareEngineeringApp
         private void AnsweredCorrectly()
         {
             timer.Stop();
+            userScore++;
             DisplayQuestion(1);  //needs further implementation
         }
     }

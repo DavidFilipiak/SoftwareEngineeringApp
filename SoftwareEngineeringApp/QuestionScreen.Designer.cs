@@ -37,6 +37,7 @@
             this.questionNumber_label = new System.Windows.Forms.Label();
             this.timer_label = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.score_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // optionA_button
@@ -91,7 +92,7 @@
             // questionNumber_label
             // 
             this.questionNumber_label.AutoSize = true;
-            this.questionNumber_label.Location = new System.Drawing.Point(13, 13);
+            this.questionNumber_label.Location = new System.Drawing.Point(346, 9);
             this.questionNumber_label.Name = "questionNumber_label";
             this.questionNumber_label.Size = new System.Drawing.Size(46, 17);
             this.questionNumber_label.TabIndex = 5;
@@ -110,11 +111,21 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // score_label
+            // 
+            this.score_label.AutoSize = true;
+            this.score_label.Location = new System.Drawing.Point(12, 9);
+            this.score_label.Name = "score_label";
+            this.score_label.Size = new System.Drawing.Size(49, 17);
+            this.score_label.TabIndex = 7;
+            this.score_label.Text = "Score:";
+            // 
             // QuestionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.score_label);
             this.Controls.Add(this.timer_label);
             this.Controls.Add(this.questionNumber_label);
             this.Controls.Add(this.question_label);
@@ -122,9 +133,9 @@
             this.Controls.Add(this.optionC_button);
             this.Controls.Add(this.optionB_button);
             this.Controls.Add(this.optionA_button);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
             this.Name = "QuestionScreen";
             this.Text = "QuestionScreen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +151,6 @@
         private System.Windows.Forms.Label questionNumber_label;
         private System.Windows.Forms.Label timer_label;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label score_label;
     }
 }
