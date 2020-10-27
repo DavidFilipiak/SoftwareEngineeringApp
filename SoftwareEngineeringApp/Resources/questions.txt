@@ -1,0 +1,167 @@
+2
+Which of these is a programming language?
+Cobra
+Byte 
+C# 
+Logic +
+C
+*
+3
+In the system life cycle what is after the design stage? 
+Planning  
+Implementation 
+Evaluation
+Testing 
+B
+*
+1
+How many bits in 3 bytes? 
+8
+11
+24
+32
+C
+*
+3
+What is an example of secondary memory? 
+USB Flash drive
+ROM
+RAM
+Processor 
+A
+*
+3
+An entity in ER model is a real world being, which has some properties called? 
+Attributes
+Relationships 
+HTTPS
+None of the Above
+A
+*
+2
+Minecraft on PC is coded in: 
+Python
+C++
+C#
+Java
+D
+*
+3
+Which of these software engineering activities are not part of the software processes? 
+Software development 
+Software validation
+Software specification
+Software dependence
+D
+*
+4
+Which of these is not a Linux distribution? 
+Ubuntu
+Manjaro
+Cthulhu
+Debian 
+C
+*
+1
+Select a device which is not a computer:
+Smartphone
+Tablet 
+Laptop 
+Remote Control 
+D
+*
+3
+What kind of validation do we use in checking the number in ISBN?
+Presence Check
+Boolean Check
+Check Digit 
+Verify Check
+C
+*
+1
+A computers physical components are called:
+RAM
+Hardware
+Software
+Motherboard 
+B
+*
+2
+What data type represents decimal numbers?
+Integers
+String
+Variables
+Floating point numbers 
+D
+*
+3
+What statement is used to get a variable from a user?
+Get
+Fetch 
+Input 
+Else 
+C
+*
+4
+In an IF statement how many paths does it allow to run a program?
+1 path
+2 paths
+3 paths
+4 paths
+B
+*
+3
+What type of loop uses a counter?
+A condition-controlled loop
+A repeat-many loop
+A infinite loop
+A count-controlled loop
+D
+*
+2
+What statement represents 'equals to' in Python?
+!==
+==
+!=
+!!
+B
+*
+1
+Whats a data structure?
+A facility containing variables
+A facility containing variables and strings
+A facility containing more than one value
+A facility containing no values
+C
+*
+2
+What does non volatile memory mean?
+Data that can be retained if theres a break
+Data that cannot be retained is theres a break 
+Data that causes the computer to crash
+Data that does not process
+A
+*
+4
+Which of these interfaces has no graphics therefore do not require much computer power
+ICL
+GUI
+CLI
+HCI
+C
+*
+1
+CPU Speed is measured by:
+Hertz
+Kmph
+Watt
+Newtons
+A
+*
+2
+Which is the most suitable protocol to use for a safe and secure transaction:
+HTTP
+HTTPS
+SMPT
+FTP
+B

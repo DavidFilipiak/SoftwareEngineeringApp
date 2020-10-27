@@ -109,7 +109,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\questions.txt" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\highscores.txt" />
   </ItemGroup>

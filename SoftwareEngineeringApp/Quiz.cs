@@ -32,7 +32,48 @@ namespace SoftwareEngineeringApp
 
         public static void LoadQuestionsFromFile()
         {
-            
+            //code for loading
+            string text = Properties.Resources.questions; //to be uploaded
+            //these data will be loaded from file;
+            string[] questions = text.Split('*');
+            string[] splitter = { "\r\n" };
+
+            int loop = 0;
+            foreach (string q in questions)
+            {
+                string[] partsOfQuestion = q.Split(splitter,StringSplitOptions.RemoveEmptyEntries);
+
+                string difficulty = partsOfQuestion[0];
+                string questionWording = partsOfQuestion[1];
+                string option1 = partsOfQuestion[2];
+                string option2 = partsOfQuestion[3];
+                string option3 = partsOfQuestion[4];
+                string option4 = partsOfQuestion[5];
+                char correctAnswer = char.Parse(partsOfQuestion[6]);
+
+                loop++;
+
+                Question question = new Question(questionWording, option1, option2, option3, option4, correctAnswer);
+
+                switch (difficulty)
+                {
+                    case "1":
+                        questionsLvl1.Add(question);
+                        break;
+                    case "2":
+                        questionsLvl2.Add(question);
+                        break;
+                    case "3":
+                        questionsLvl3.Add(question);
+                        break;
+                    case "4":
+                        questionsLvl4.Add(question);
+                        break;
+                    default:
+                        questionsLvl1.Add(question);
+                        break;
+                }
+            }
         }
     }
 }

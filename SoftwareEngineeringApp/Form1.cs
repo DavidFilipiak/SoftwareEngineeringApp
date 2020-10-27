@@ -20,9 +20,8 @@ namespace SoftwareEngineeringApp
             //highscores.Add("david", 0); // line for testing
 
             Quiz.LoadHighScoresFromFile();
+            Quiz.LoadQuestionsFromFile();
             this.highscores = Quiz.highscores;
-
-            Quiz.questionsLvl1.Add(new Question("How are you", "good", "very good", "excellent", "bad", 'D'));
 
             ReadHighScoresFromFile(); //needs implementation
         }
