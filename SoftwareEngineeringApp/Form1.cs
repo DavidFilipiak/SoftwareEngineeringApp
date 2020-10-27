@@ -34,6 +34,7 @@ namespace SoftwareEngineeringApp
                 ContinueToMainWindow();
             }
         }
+       
 
         private bool AddUsernameToDictionary(string username)
         {

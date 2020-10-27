@@ -27,6 +27,11 @@ namespace SoftwareEngineeringApp
 
         }
 
+        private void QuestionScreen_FormClosing(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
+
         private void DisplayQuestion(int difficulty)
         {
             SetTimer(20);

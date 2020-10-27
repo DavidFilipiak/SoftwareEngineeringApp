@@ -122,6 +122,7 @@
             this.Controls.Add(this.optionC_button);
             this.Controls.Add(this.optionB_button);
             this.Controls.Add(this.optionA_button);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
             this.Name = "QuestionScreen";
             this.Text = "QuestionScreen";
             this.ResumeLayout(false);
