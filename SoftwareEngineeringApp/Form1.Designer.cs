@@ -52,6 +52,7 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(136, 22);
             this.usernameTextBox.TabIndex = 2;
+            this.usernameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(usernameTextBox_KeyDown);
             // 
             // usernameButton
             // 

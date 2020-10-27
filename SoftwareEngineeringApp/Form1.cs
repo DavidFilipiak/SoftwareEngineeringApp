@@ -34,6 +34,18 @@ namespace SoftwareEngineeringApp
                 ContinueToMainWindow();
             }
         }
+
+        private void usernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string usernameEntered = usernameTextBox.Text;
+                if (AddUsernameToDictionary(usernameEntered))
+                {
+                    ContinueToMainWindow();
+                }
+            }
+        }
        
 
         private bool AddUsernameToDictionary(string username)
