@@ -24,12 +24,24 @@ namespace SoftwareEngineeringApp
 
         public static void LoadHighScoresFromFile()
         {
-            string text = Properties.Resources.highscores;
-            string[] lines = text.Split('\r');
-            foreach(string line in lines)
+            string currentDirPath = Environment.CurrentDirectory;
+            string newDirPath = Path.Combine(currentDirPath, "C_Who's_Sharper");
+            if(!Directory.Exists(newDirPath))
             {
-                string[] pair = line.Split(' ');
-                highscores.Add(pair[0], int.Parse(pair[1]));
+                CreateDirectory(newDirPath);
+            }
+            string filePath = Path.Combine(newDirPath, "highscores.txt");
+
+            StreamReader reader = new StreamReader(filePath);            
+            using (reader)
+            {
+                string line = reader.ReadLine();
+                while(line != null)
+                {
+                    string[] pair = line.Split(' ');
+                    highscores.Add(pair[0], int.Parse(pair[1]));
+                    line = reader.ReadLine();
+                }
             }
 
             highscoresLoaded = true;
@@ -81,6 +93,27 @@ namespace SoftwareEngineeringApp
             }
 
             highscoresLoaded = true;
+        }
+
+        public static void SaveHighscoresToFile()
+        {
+            string currentDirPath = Environment.CurrentDirectory;
+            string newDirPath = Path.Combine(currentDirPath, "C_Who's_Sharper");
+
+            StreamWriter writer = new StreamWriter(Path.Combine(newDirPath,"highscores.txt"), false);
+            using (writer)
+            {
+                foreach (var score in highscores)
+                {
+                    writer.WriteLineAsync(score.Key + " " + score.Value);
+                }
+            }            
+        }
+
+        private static void CreateDirectory(string dirPath)
+        {
+            Directory.CreateDirectory(dirPath);
+            File.Create(Path.Combine(dirPath, "highscores.txt"));
         }
     }
 }

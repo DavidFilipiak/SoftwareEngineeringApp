@@ -55,7 +55,11 @@ namespace SoftwareEngineeringApp
                 }
             }
         }
-       
+
+        private void Form1_FormClosing(object sender, EventArgs e)
+        {
+            Quiz.SaveHighscoresToFile();
+        }
 
         private bool AddUsernameToDictionary(string username)
         {

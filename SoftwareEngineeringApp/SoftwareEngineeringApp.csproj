@@ -113,7 +113,7 @@
     <None Include="Resources\questions.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\highscores.txt" />
+    <EmbeddedResource Include="Resources\highscores.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New Background1.png" />
