@@ -19,11 +19,20 @@ namespace SoftwareEngineeringApp
             InitializeComponent();
             //highscores.Add("david", 0); // line for testing
 
+
             Quiz.LoadHighScoresFromFile();
             Quiz.LoadQuestionsFromFile();
+
             this.highscores = Quiz.highscores;
 
-            ReadHighScoresFromFile(); //needs implementation
+            DisplayHighScores();
+        }
+
+        public Form1(bool fromQuestionScreen)
+        {
+            InitializeComponent();
+            this.highscores = Quiz.highscores;
+            ContinueToMainWindow();
         }
 
         private void usernameButton_Click(object sender, EventArgs e)
@@ -76,24 +85,16 @@ namespace SoftwareEngineeringApp
 
         private void ContinueToMainWindow()
         {
+            Quiz.currentUsername = usernameTextBox.Text;
+
             usernameLabel.Hide();
             usernameTextBox.Hide();
             usernameButton.Hide();
 
-            //displays all scores in the highscores dictionary sorted from highest to lowest (to be added, below is the link). 
-            //The link to the the source of the solution:
-            //https://www.c-sharpcorner.com/UploadFile/mahesh/sort-a-dictionary-by-value-in-C-Sharp/
-            foreach (var usernameHighscore in highscores.OrderByDescending(key => key.Value))  
-            {
-                highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
-            }
+            DisplayHighScores();
+            
             highScores_listBox.Show();
             play_button.Show();
-        }
-
-        private void ReadHighScoresFromFile()
-        {
-            //this will read highscores from either .txt or .dat file and put them in the highscores directory
         }
 
         private void helpButton_Click(object sender, EventArgs e)
@@ -104,8 +105,22 @@ namespace SoftwareEngineeringApp
 
         private void play_button_Click(object sender, EventArgs e)
         {
+            this.Hide();
             QuestionScreen qs = new QuestionScreen();
             qs.ShowDialog();
+            this.Close();
+        }
+
+        private void DisplayHighScores()
+        {
+            highScores_listBox.Items.Clear();
+            //displays all scores in the highscores dictionary sorted from highest to lowest (to be added, below is the link). 
+            //The link to the the source of the solution:
+            //https://www.c-sharpcorner.com/UploadFile/mahesh/sort-a-dictionary-by-value-in-C-Sharp/
+            foreach (var usernameHighscore in highscores.OrderByDescending(key => key.Value))
+            {
+                highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
+            }
         }
     }
 }

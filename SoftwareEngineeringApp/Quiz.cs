@@ -19,6 +19,9 @@ namespace SoftwareEngineeringApp
         public static Dictionary<string, int> highscores = new Dictionary<string, int>();
         public static string currentUsername;
 
+        public static bool highscoresLoaded = false;
+        public static bool questionsLoaded = false;
+
         public static void LoadHighScoresFromFile()
         {
             string text = Properties.Resources.highscores;
@@ -28,6 +31,8 @@ namespace SoftwareEngineeringApp
                 string[] pair = line.Split(' ');
                 highscores.Add(pair[0], int.Parse(pair[1]));
             }
+
+            highscoresLoaded = true;
         }
 
         public static void LoadQuestionsFromFile()
@@ -74,6 +79,8 @@ namespace SoftwareEngineeringApp
                         break;
                 }
             }
+
+            highscoresLoaded = true;
         }
     }
 }

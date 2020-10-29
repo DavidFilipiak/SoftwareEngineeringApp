@@ -110,7 +110,8 @@ namespace SoftwareEngineeringApp
         private void AnsweredIncorrectly()
         {
             timer.Stop();
-            this.Close();
+            SaveScore();
+            OpenMainScreen();
         }
 
         private void AnsweredCorrectly()
@@ -118,6 +119,19 @@ namespace SoftwareEngineeringApp
             timer.Stop();
             userScore++;
             DisplayQuestion(1);  //needs further implementation
+        }
+
+        private void SaveScore()
+        {
+            Quiz.highscores[Quiz.currentUsername] = userScore;
+        }
+
+        private void OpenMainScreen()
+        {
+            this.Hide();
+            Form1 mainForm = new Form1(true);
+            mainForm.ShowDialog();
+            this.Close();
         }
     }
 }
