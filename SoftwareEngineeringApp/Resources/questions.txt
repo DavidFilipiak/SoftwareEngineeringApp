@@ -1,4 +1,4 @@
-2
+﻿2
 Which of these is a programming language?
 Cobra
 Byte 
@@ -165,3 +165,475 @@ HTTPS
 SMPT
 FTP
 B
+*
+1	
+Which one of these statements contains a syntax error?
+print("I will win this quiz")
+print(answer)
+pront("I will win this quiz") 
+print("I will lose this quiz") 
+C
+*
+3
+What does CD-ROM stand for?
+Computer Disc Read Only Memory
+Collect Disc Read Only Memory
+Current Disc Read Only Memory
+Compact Disc Read Only Memory 
+D
+*
+4
+What's the 'Caesar Cipher' known as?
+Rot3
+Rot4
+Rot2
+RotC
+A
+*
+2
+What common programming language names also goes by 'a gemstone'?
+Amber
+Amethyst
+Opal
+Ruby
+D
+*
+1
+What's binary code made out of?
+Dots and Dashes 
+X's and Z's
+0's and 1's
+1's and 2's 
+C
+*
+4
+What is name given to the computers used by the British Codebreakers in WW2 to break the Lorenz Cipher?
+Collossus
+Collosal
+Collosums
+Collostack
+A
+*
+1
+What does AVG stand for in an Antivirus Software?
+Anti-Virus Game
+Anti-Virus SafeGuard
+Anti-Virus Guard
+Anti-Virus Gift
+B
+*
+3
+What does 'S' stand for in the programming language 'BASIC'?
+Safety
+Systems
+Symbol
+Symbolic 
+D
+*
+4
+Who designed Python Programming language?
+Guido Van Rossum
+Robert Attick
+Yukhiro Matomo
+Lariska Wall
+A
+*
+1
+Which number system does a computer use to store data and calculations?
+Decimals
+Octadecimals
+Binary
+Numerals 
+C
+*
+2
+Which numeric value is used to identify a memory cell?
+Boolean
+Bit
+Hexidecimal
+Address
+D
+*
+3
+Which means of encoding text does have a symbol that is represented by 16 bits?
+ASCII
+UTF
+ISO
+Unicode
+D
+*
+1
+In a mass storage system what is a segment of a track called?
+Pixel
+Part
+Sector
+Section
+C
+*
+2
+What is the correct definiton of a Queue in software engineering?
+Queue is always first in and last out
+Queue is alwats first in and first out 
+Queue is always last in and last out
+Queue is always last in and first out 
+B
+*
+3
+What three things need to be analysed during a feasibilty study?
+Educational, Software, Operational 
+Economic, Techcnical, Operational 
+Practical, Studies, Operational 
+Jobs, Testing, Operational 
+B
+*
+3
+What type of data is passed via HTTP Headers?
+Data
+Decimals
+Metadata
+Numbers
+C
+*
+4
+Which one of these is the first fully supported 64-bit operating system?
+Linux
+Mac
+Windows Vista
+Windows XP
+A
+*
+2
+What is Trojan typically referred to?
+Spyware
+Virus
+Worm
+Malware
+D
+*
+3
+Which one of these protocols is used to send an email?
+POP3
+HTTP
+SMTP
+SSH
+C
+*
+1
+What year was the '@' sign first used in email addresses?
+1987
+1972
+1962
+1970
+B
+*
+3
+How many maximum Primary Partitions can be created on a Hard-disk?
+1
+2
+3
+4
+D
+*
+4
+Which one of these is a connectionless protocol?
+UDP
+TCP
+IPX
+SPX
+A
+*
+1
+Who's the owner of Facebook?
+Jan Koum
+Mark Yiming
+Mark Berg
+Mark Zuckerberg
+D
+*
+2
+What power does the Binary System use?
+1
+2
+4
+6
+B
+*
+2
+Which one of these shortcut keys closes an active window?
+Alt + F5
+Alt + F6
+Alt + L
+Alt + F4
+D
+*
+3
+Which communication system transfers data from one component to another inside a computer?
+Processor
+LAN
+Bus
+RAM
+C
+*
+1
+Which of these connects two or more networks?
+Gateway
+Bus
+Highway
+Connector
+A
+*
+2
+How many statements are in this code: print("When I am 20, I can buy my own computer")?
+0
+1
+2
+3
+B
+*
+3
+What is a procedure?
+A section of code within a program that performs a task
+A section of iterated statements that can be repeated 
+A decision in a program
+A set of tasks that need to be carried out
+A
+*
+4
+What was the name of the first laptop from IBM?
+Reversible
+Irreversible
+Convertible
+Conjunctional
+C
+*
+1
+What does GPU stand for
+Graphics Processing Unit
+Graphical Processor Unit
+Great Processing Unit
+Graph Processor Unit
+A
+*
+2
+What is a type of relationship in a database?
+One to One
+One to Two
+One to Three
+One to Four
+A
+*
+1
+Performing a task with a set of instructions is called what?
+A software
+A hardware
+Stored Data
+A program
+D
+*
+2
+Which product did Amazon originally only sell?
+Music
+Books
+Apps
+Clothes
+B
+*
+3
+What element interconnects different elements of a computer system?
+Programs
+Junctions
+Mesh
+Starfish
+C
+*
+4
+What was the first microprocessor developed in 1971?
+Intel 2002
+Intel 4004
+Intel 8088
+Intel Pentium
+B
+*
+1
+Which one of these is not a peripheral?
+Monitor
+Keyboard
+Motherboard
+Mouse 
+C
+*
+2
+In which year was google founded?
+1998
+1989
+1987
+2000
+A
+*
+3
+What distrubution model is Amazon Services?
+Platform as a service
+Software as a service
+Service of a Service
+Infrastructure as a Service
+D
+*
+4
+100 different assembly language instructions can be recognized by which processor?
+KIKO
+VISC
+CISC
+ITUE
+C
+*
+1
+In an website what does '.com' stand for?
+Commercial
+Cordial
+Count
+Cooperation
+A
+*
+2
+What is a system with a single processor is called?
+Processing System
+Processor System
+Uni System
+Uniprocessor System
+D
+*
+3
+Which one of these is not a major computing platform?
+Amazon EC2
+Google 101
+Microsoft Azure
+IBM Deep Blue
+D
+*
+4
+In 2000 there was a coding issue that created havoc in computer networks. What was it called?
+Storms Arise
+Y2K Bug 
+Bug Rise
+CrptoBug
+B
+*
+1
+What does CAE stand for?
+Computer Aims Engineering
+Computer Aided Engineering
+Computer Analysis Engineering
+Computer Analytics Engineer
+B
+*
+2
+What type of electromagnetic waves does WIFI use?
+Radio Waves
+Gamma Rays
+Infrared Waves
+Waves
+A
+*
+3
+Which company created the the computer programming language called Java?
+Microsoft Corporation
+IBM Corporation
+Sun Microsystems Inc.
+Microsystems Compositions
+C
+*
+4
+Ecrypting encoded messages is called what?
+Deciphering
+Enciphering
+Uncode
+Decode
+B
+*
+1
+An IP adress identifies what?
+A number uniquely identifying each computer on the Internet
+A programming code 
+A language of programming that completes a number
+Identity of a the DNS source 
+A
+*
+1
+What is 'Rule-Based' programming?
+Algorithms
+Functional
+Symbolical
+Logical
+D
+*
+2
+What set of steps does a paradigm follow?
+Functional
+Imperative
+Logical
+Repetitive
+B
+*
+3
+In C++ programs, the word friend appears in what?
+Private section of a class
+Public section of a class
+Class allowing access to another class
+All of the above
+D
+*
+4
+Which character does the modulus operator use?
+%
+/
+£
+()
+A
+*
+1
+What is data called which is entered into a computer?
+Output
+Compiler
+Input
+Code
+C
+*
+1
+What application creates powerpoints?
+MS Word
+MS Excel
+MS Access
+MS Powerpoint
+D
+*
+4
+Which of these is not a C++ keyword?
+If
+Cont
+New
+This
+B
+*
+3
+What variable holds a memory address?
+Float
+Char
+Pointer
+Doubles
+C
+*
+2
+Smallest unit of information is called?
+RAM
+ROM
+BYTE
+BIT
+D
+*
+3
+4th Generation Language is what language?
+Non procedural
+Procedural
+Structural 
+None of the above
+A
