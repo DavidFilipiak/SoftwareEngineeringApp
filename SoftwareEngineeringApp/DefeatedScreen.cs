@@ -8,22 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SoftwareEngineeringApp
+namespace SoftwareEngineeringApp.Resources
 {
-    public partial class difficultyScreen : Form
+    public partial class DefeatedScreen : Form
+
     {
-        public difficultyScreen()
+        
+        public DefeatedScreen()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            Quiz.LoadHighScoresFromFile();
+            
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            Form1 form1 = new Form1 ();
+            form1.Show();
+            
+
+
 
         }
     }

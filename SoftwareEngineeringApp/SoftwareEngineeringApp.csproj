@@ -58,12 +58,6 @@
     <Compile Include="helpScreen.Designer.cs">
       <DependentUpon>helpScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="difficultyScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="difficultyScreen.Designer.cs">
-      <DependentUpon>difficultyScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Qestion.cs" />
@@ -74,9 +68,12 @@
       <DependentUpon>QuestionScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Quiz.cs" />
-    <EmbeddedResource Include="difficultyScreen.resx">
-      <DependentUpon>difficultyScreen.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="DefeatedScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefeatedScreen.Designer.cs">
+      <DependentUpon>DefeatedScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="QuestionScreen.resx">
       <DependentUpon>QuestionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefeatedScreen.resx">
+      <DependentUpon>DefeatedScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -21,7 +21,10 @@ namespace SoftwareEngineeringApp
         public QuestionScreen()
         {
             InitializeComponent();
+            int gameDiff = (Form1.gameDiff);
+            
 
+            
             timer.Interval = 1000;
             DisplayQuestion(1);
 
@@ -58,9 +61,33 @@ namespace SoftwareEngineeringApp
 
         private Question GetRandomQuestion(List<Question> questionList)
         {
-            Random random = new Random();
-            int randomPos = random.Next(0, questionList.Count);
-            return questionList[randomPos];
+            int gameDiff = (Form1.gameDiff);
+            if (gameDiff == 1)
+            {
+                Random random = new Random();
+                int randomPos = random.Next(0, questionList.Count);
+                return questionList[randomPos];
+            }
+            else if (gameDiff == 2)
+            {
+                Random random = new Random();
+                int randomPos = random.Next(0, questionList.Count);
+                return questionList[randomPos];
+            }
+            else if (gameDiff == 3)
+            {
+                Random random = new Random();
+                int randomPos = random.Next(0, questionList.Count);
+                return questionList[randomPos];
+            }
+
+            else 
+            {
+                Random random = new Random();
+                int randomPos = random.Next(0, questionList.Count);
+                return questionList[randomPos];
+            }
+
         }
 
         private void SetTimer(int seconds)
@@ -102,13 +129,54 @@ namespace SoftwareEngineeringApp
         private void AnsweredIncorrectly()
         {
             timer.Stop();
+            Form1 form1 = new Form1();
+            form1.Show();
             this.Close();
+            
+
         }
 
         private void AnsweredCorrectly()
         {
             timer.Stop();
             DisplayQuestion(1);  //needs further implementation
+        }
+
+        private void questionNumber_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDiff_Click(object sender, EventArgs e)
+        {
+            string textDiff;
+            int gameDiff = Form1.gameDiff;
+            if (gameDiff == 1)
+            {
+                textDiff = "Easy";
+                labelDiff.Text = textDiff;
+            }
+            else if (gameDiff == 2)
+            {
+                textDiff = "Medium";
+                labelDiff.Text = textDiff;
+            }
+
+            else if (gameDiff == 3)
+            {
+                textDiff = "Difficult";
+                labelDiff.Text = textDiff;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            var sc
+                = new DefeatedScreen();
+
+
         }
     }
 }

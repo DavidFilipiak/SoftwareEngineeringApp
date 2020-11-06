@@ -12,6 +12,8 @@ namespace SoftwareEngineeringApp
         private string question;
         private string[] options;
         private char correctAnswer;
+        
+        
 
         public string QuestionWording
         {
