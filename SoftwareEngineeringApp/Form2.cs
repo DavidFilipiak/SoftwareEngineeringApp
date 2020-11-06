@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace SoftwareEngineeringApp
 {
-    public partial class difficultyScreen : Form
+    public partial class Form2 : Form
     {
-        public difficultyScreen()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Visible = false;
         }
     }
 }
