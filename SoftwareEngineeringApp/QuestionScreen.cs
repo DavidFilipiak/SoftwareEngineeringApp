@@ -172,9 +172,8 @@ namespace SoftwareEngineeringApp
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form1 form1 = new Form1();
-            var sc
-                = new DefeatedScreen();
+            DefeatedScreen DefeatedScreen = new DefeatedScreen;
+            
 
 
         }
