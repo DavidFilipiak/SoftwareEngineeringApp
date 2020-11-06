@@ -32,21 +32,7 @@ namespace SoftwareEngineeringApp
             SetTimer(20);
             timer.Start();
 
-            switch(difficulty)
-            {
-                case 1:
-                    currentQuestion = GetRandomQuestion(Quiz.questionsLvl1);
-                    break;
-                case 2:
-                    currentQuestion = GetRandomQuestion(Quiz.questionsLvl2);
-                    break;
-                case 3:
-                    currentQuestion = GetRandomQuestion(Quiz.questionsLvl3);
-                    break;
-                case 4:
-                    currentQuestion = GetRandomQuestion(Quiz.questionsLvl4);
-                    break;
-            }
+            currentQuestion = Quiz.questionsLvl1[0];
 
             questionNumber_label.Text = questionNumber.ToString();
             question_label.Text = currentQuestion.QuestionWording;
@@ -54,13 +40,6 @@ namespace SoftwareEngineeringApp
             optionB_button.Text = currentQuestion.Options[1];
             optionC_button.Text = currentQuestion.Options[2];
             optionD_button.Text = currentQuestion.Options[3];
-        }
-
-        private Question GetRandomQuestion(List<Question> questionList)
-        {
-            Random random = new Random();
-            int randomPos = random.Next(0, questionList.Count);
-            return questionList[randomPos];
         }
 
         private void SetTimer(int seconds)
