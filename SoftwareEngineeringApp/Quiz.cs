@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace SoftwareEngineeringApp
 {
@@ -26,18 +27,19 @@ namespace SoftwareEngineeringApp
         {
             string currentDirPath = Environment.CurrentDirectory;
             string newDirPath = Path.Combine(currentDirPath, "C_Who's_Sharper");
+            string newFilePath = Path.Combine(currentDirPath, "C_Who's_Sharper", "highscores.txt");
 
             if (!Directory.Exists(newDirPath))
             {
-                CreateDirectory(newDirPath);
+                Directory.CreateDirectory(newDirPath);
             }
-            string filePath = Path.Combine(newDirPath, "highscores.txt");
-            if (!File.Exists(filePath))
+           
+            if (!File.Exists(newFilePath))
             {
-                File.Create(filePath);
+                File.Create(newFilePath).Close();
             }
 
-            StreamReader reader = new StreamReader(filePath);            
+            StreamReader reader = new StreamReader(newFilePath);            
             using (reader)
             {
                 string line = reader.ReadLine();
