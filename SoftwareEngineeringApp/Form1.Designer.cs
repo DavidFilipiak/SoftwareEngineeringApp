@@ -39,26 +39,27 @@
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(813, 411);
+            this.usernameLabel.Location = new System.Drawing.Point(605, 333);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(139, 17);
+            this.usernameLabel.Size = new System.Drawing.Size(104, 13);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "Enter the Username:";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(811, 447);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.usernameTextBox.Location = new System.Drawing.Point(608, 363);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(136, 22);
+            this.usernameTextBox.Size = new System.Drawing.Size(103, 20);
             this.usernameTextBox.TabIndex = 2;
             // 
             // usernameButton
             // 
-            this.usernameButton.Location = new System.Drawing.Point(801, 487);
-            this.usernameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.usernameButton.Location = new System.Drawing.Point(601, 396);
+            this.usernameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameButton.Name = "usernameButton";
-            this.usernameButton.Size = new System.Drawing.Size(157, 34);
+            this.usernameButton.Size = new System.Drawing.Size(118, 28);
             this.usernameButton.TabIndex = 3;
             this.usernameButton.Text = "Enter the username";
             this.usernameButton.UseVisualStyleBackColor = true;
@@ -68,20 +69,18 @@
             // 
             this.highScores_listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.highScores_listBox.FormattingEnabled = true;
-            this.highScores_listBox.ItemHeight = 16;
-            this.highScores_listBox.Location = new System.Drawing.Point(1421, 198);
-            this.highScores_listBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.highScores_listBox.Location = new System.Drawing.Point(1066, 161);
+            this.highScores_listBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.highScores_listBox.Name = "highScores_listBox";
-            this.highScores_listBox.Size = new System.Drawing.Size(196, 228);
+            this.highScores_listBox.Size = new System.Drawing.Size(148, 186);
             this.highScores_listBox.TabIndex = 4;
             this.highScores_listBox.Visible = false;
             // 
             // helpButton
             // 
-            this.helpButton.Location = new System.Drawing.Point(16, 15);
-            this.helpButton.Margin = new System.Windows.Forms.Padding(4);
+            this.helpButton.Location = new System.Drawing.Point(12, 12);
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(115, 34);
+            this.helpButton.Size = new System.Drawing.Size(86, 28);
             this.helpButton.TabIndex = 5;
             this.helpButton.Text = "Need help?";
             this.helpButton.UseVisualStyleBackColor = true;
@@ -89,9 +88,10 @@
             // 
             // play_button
             // 
-            this.play_button.Location = new System.Drawing.Point(582, 374);
+            this.play_button.Location = new System.Drawing.Point(440, 304);
+            this.play_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.play_button.Name = "play_button";
-            this.play_button.Size = new System.Drawing.Size(120, 52);
+            this.play_button.Size = new System.Drawing.Size(90, 42);
             this.play_button.TabIndex = 6;
             this.play_button.Text = "Play";
             this.play_button.UseVisualStyleBackColor = true;
@@ -100,17 +100,17 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background___Title;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.play_button);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.highScores_listBox);
             this.Controls.Add(this.usernameButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
