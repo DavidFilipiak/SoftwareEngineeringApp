@@ -31,6 +31,10 @@ namespace SoftwareEngineeringApp
                 CreateDirectory(newDirPath);
             }
             string filePath = Path.Combine(newDirPath, "highscores.txt");
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath);
+            }
 
             StreamReader reader = new StreamReader(filePath);            
             using (reader)
@@ -99,6 +103,11 @@ namespace SoftwareEngineeringApp
         {
             string currentDirPath = Environment.CurrentDirectory;
             string newDirPath = Path.Combine(currentDirPath, "C_Who's_Sharper");
+            if (Directory.Exists(newDirPath) == false)
+            {
+                Directory.CreateDirectory(currentDirPath);
+            }
+
 
             StreamWriter writer = new StreamWriter(Path.Combine(newDirPath,"highscores.txt"), false);
             using (writer)
