@@ -26,17 +26,19 @@ namespace SoftwareEngineeringApp
         {
             string currentDirPath = Environment.CurrentDirectory;
             string newDirPath = Path.Combine(currentDirPath, "C_Who's_Sharper");
-            if(!Directory.Exists(newDirPath))
+            string newFilePath = Path.Combine(currentDirPath, "C_Who's_Sharper", "highscores.txt");
+
+            if (!Directory.Exists(newDirPath))
             {
-                CreateDirectory(newDirPath);
-            }
-            string filePath = Path.Combine(newDirPath, "highscores.txt");
-            if (!File.Exists(filePath))
-            {
-                File.Create(filePath);
+                Directory.CreateDirectory(newDirPath);
             }
 
-            StreamReader reader = new StreamReader(filePath);            
+            if (!File.Exists(newFilePath))
+            {
+                File.Create(newFilePath).Close();
+            }
+            
+            StreamReader reader = new StreamReader(newFilePath);            
             using (reader)
             {
                 string line = reader.ReadLine();
