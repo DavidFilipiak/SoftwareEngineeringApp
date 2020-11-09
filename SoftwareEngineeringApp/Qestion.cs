@@ -12,6 +12,8 @@ namespace SoftwareEngineeringApp
         private string question;
         private string[] options;
         private char correctAnswer;
+        
+        
 
         public string QuestionWording
         {
@@ -48,10 +50,14 @@ namespace SoftwareEngineeringApp
             this.CorrectAnswer = correctAnswer;
         }
 
-        /*public bool CheckAnswer(char givenAnswerNumber)
+        public bool CheckAnswer(char givenAnswerNumber)
         {
-
-        }*/
+            if (givenAnswerNumber == correctAnswer)
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 
 

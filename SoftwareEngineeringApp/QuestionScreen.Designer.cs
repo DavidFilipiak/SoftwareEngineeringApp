@@ -34,16 +34,19 @@
             this.optionC_button = new System.Windows.Forms.Button();
             this.optionD_button = new System.Windows.Forms.Button();
             this.question_label = new System.Windows.Forms.Label();
-            this.questionNumber_label = new System.Windows.Forms.Label();
             this.timer_label = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.score_label = new System.Windows.Forms.Label();
+            this.questionNumber_label = new System.Windows.Forms.Label();
+            this.labelDiff = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // optionA_button
             // 
-            this.optionA_button.Location = new System.Drawing.Point(24, 197);
+            this.optionA_button.Location = new System.Drawing.Point(12, 349);
+            this.optionA_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionA_button.Name = "optionA_button";
-            this.optionA_button.Size = new System.Drawing.Size(230, 100);
+            this.optionA_button.Size = new System.Drawing.Size(600, 130);
             this.optionA_button.TabIndex = 0;
             this.optionA_button.Text = "button1";
             this.optionA_button.UseVisualStyleBackColor = true;
@@ -51,9 +54,10 @@
             // 
             // optionB_button
             // 
-            this.optionB_button.Location = new System.Drawing.Point(472, 191);
+            this.optionB_button.Location = new System.Drawing.Point(652, 349);
+            this.optionB_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionB_button.Name = "optionB_button";
-            this.optionB_button.Size = new System.Drawing.Size(230, 112);
+            this.optionB_button.Size = new System.Drawing.Size(600, 130);
             this.optionB_button.TabIndex = 1;
             this.optionB_button.Text = "button2";
             this.optionB_button.UseVisualStyleBackColor = true;
@@ -61,9 +65,10 @@
             // 
             // optionC_button
             // 
-            this.optionC_button.Location = new System.Drawing.Point(24, 322);
+            this.optionC_button.Location = new System.Drawing.Point(12, 494);
+            this.optionC_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionC_button.Name = "optionC_button";
-            this.optionC_button.Size = new System.Drawing.Size(236, 100);
+            this.optionC_button.Size = new System.Drawing.Size(600, 130);
             this.optionC_button.TabIndex = 2;
             this.optionC_button.Text = "button3";
             this.optionC_button.UseVisualStyleBackColor = true;
@@ -71,9 +76,10 @@
             // 
             // optionD_button
             // 
-            this.optionD_button.Location = new System.Drawing.Point(472, 322);
+            this.optionD_button.Location = new System.Drawing.Point(652, 494);
+            this.optionD_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionD_button.Name = "optionD_button";
-            this.optionD_button.Size = new System.Drawing.Size(236, 103);
+            this.optionD_button.Size = new System.Drawing.Size(600, 130);
             this.optionD_button.TabIndex = 3;
             this.optionD_button.Text = "button4";
             this.optionD_button.UseVisualStyleBackColor = true;
@@ -81,26 +87,18 @@
             // 
             // question_label
             // 
+            this.question_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.question_label.AutoSize = true;
-            this.question_label.Location = new System.Drawing.Point(346, 117);
+            this.question_label.Location = new System.Drawing.Point(588, 275);
             this.question_label.Name = "question_label";
-            this.question_label.Size = new System.Drawing.Size(46, 17);
+            this.question_label.Size = new System.Drawing.Size(95, 17);
             this.question_label.TabIndex = 4;
-            this.question_label.Text = "label1";
-            // 
-            // questionNumber_label
-            // 
-            this.questionNumber_label.AutoSize = true;
-            this.questionNumber_label.Location = new System.Drawing.Point(13, 13);
-            this.questionNumber_label.Name = "questionNumber_label";
-            this.questionNumber_label.Size = new System.Drawing.Size(46, 17);
-            this.questionNumber_label.TabIndex = 5;
-            this.questionNumber_label.Text = "label1";
+            this.question_label.Text = "question here";
             // 
             // timer_label
             // 
             this.timer_label.AutoSize = true;
-            this.timer_label.Location = new System.Drawing.Point(745, 13);
+            this.timer_label.Location = new System.Drawing.Point(1228, 9);
             this.timer_label.Name = "timer_label";
             this.timer_label.Size = new System.Drawing.Size(24, 17);
             this.timer_label.TabIndex = 6;
@@ -110,11 +108,42 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // score_label
+            // 
+            this.score_label.AutoSize = true;
+            this.score_label.Location = new System.Drawing.Point(16, 11);
+            this.score_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.score_label.Name = "score_label";
+            this.score_label.Size = new System.Drawing.Size(49, 17);
+            this.score_label.TabIndex = 7;
+            this.score_label.Text = "Score:";
+            // 
+            // questionNumber_label
+            // 
+            this.questionNumber_label.AutoSize = true;
+            this.questionNumber_label.Location = new System.Drawing.Point(588, 9);
+            this.questionNumber_label.Name = "questionNumber_label";
+            this.questionNumber_label.Size = new System.Drawing.Size(114, 17);
+            this.questionNumber_label.TabIndex = 5;
+            this.questionNumber_label.Text = "question number";
+            // 
+            // labelDiff
+            // 
+            this.labelDiff.AutoSize = true;
+            this.labelDiff.Location = new System.Drawing.Point(576, 655);
+            this.labelDiff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDiff.Name = "labelDiff";
+            this.labelDiff.Size = new System.Drawing.Size(126, 17);
+            this.labelDiff.TabIndex = 7;
+            this.labelDiff.Text = "Selected difficulty: ";
+            // 
             // QuestionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.labelDiff);
+            this.Controls.Add(this.score_label);
             this.Controls.Add(this.timer_label);
             this.Controls.Add(this.questionNumber_label);
             this.Controls.Add(this.question_label);
@@ -122,8 +151,10 @@
             this.Controls.Add(this.optionC_button);
             this.Controls.Add(this.optionB_button);
             this.Controls.Add(this.optionA_button);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuestionScreen";
             this.Text = "QuestionScreen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,8 +167,10 @@
         private System.Windows.Forms.Button optionC_button;
         private System.Windows.Forms.Button optionD_button;
         private System.Windows.Forms.Label question_label;
-        private System.Windows.Forms.Label questionNumber_label;
         private System.Windows.Forms.Label timer_label;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label questionNumber_label;
+        private System.Windows.Forms.Label labelDiff;
+        private System.Windows.Forms.Label score_label;
     }
 }

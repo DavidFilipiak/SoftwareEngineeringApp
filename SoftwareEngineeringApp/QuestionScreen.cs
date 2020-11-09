@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,19 +13,30 @@ namespace SoftwareEngineeringApp
 {
     public partial class QuestionScreen : Form
     {
-        private static int questionNumber = 1;
+        private int questionNumber = 1;
+        private int userScore = 0;
         //private static int difficulty; //data type can be changed
         private static int time = 20;
         Question currentQuestion;
+        private int gameDiff;
+
+        private List<Question> usedQuestions = new List<Question>();
      
 
-        public QuestionScreen()
+        public QuestionScreen(int gameDifficulty)
         {
             InitializeComponent();
-
+            this.ActiveControl = null;
+            this.gameDiff = gameDifficulty;
+            DisplayGameDifficulty(gameDifficulty);
+            userScore = 0;
             timer.Interval = 1000;
-            DisplayQuestion(1);
+            ChooseQuestion(this.gameDiff, this.questionNumber);
+        }
 
+        private void QuestionScreen_FormClosing(object sender, EventArgs e)
+        {
+            timer.Stop();
         }
 
         private void DisplayQuestion(int difficulty)
@@ -48,19 +60,58 @@ namespace SoftwareEngineeringApp
                     break;
             }
 
-            questionNumber_label.Text = questionNumber.ToString();
+            questionNumber_label.Text = "Question " + questionNumber.ToString();
             question_label.Text = currentQuestion.QuestionWording;
             optionA_button.Text = currentQuestion.Options[0];
             optionB_button.Text = currentQuestion.Options[1];
             optionC_button.Text = currentQuestion.Options[2];
             optionD_button.Text = currentQuestion.Options[3];
+
+            score_label.Text = "Score: " + userScore.ToString();
         }
 
         private Question GetRandomQuestion(List<Question> questionList)
         {
             Random random = new Random();
-            int randomPos = random.Next(0, questionList.Count);
-            return questionList[randomPos];
+            int randomPos;
+            Question selectedQuestion;
+            do
+            {
+                randomPos = random.Next(0, questionList.Count);
+                selectedQuestion = questionList[randomPos];
+            }
+            while (this.usedQuestions.Contains(selectedQuestion) == true);
+
+            this.usedQuestions.Add(selectedQuestion);
+            return selectedQuestion;
+        }
+
+        private void ChooseQuestion(int gameDifficulty, int questionNumber)
+        {
+            if (questionNumber <= 20)
+            {
+                if (gameDifficulty == 1 && questionNumber <= 10)
+                {
+                    DisplayQuestion(1);
+                }
+                else if ((gameDifficulty == 1 && questionNumber <= 20) || (gameDifficulty == 2 && questionNumber <= 10))
+                {
+                    DisplayQuestion(2);
+                }
+                else if ((gameDifficulty == 2 && questionNumber <= 20) || (gameDifficulty == 3 && questionNumber <= 10))
+                {
+                    DisplayQuestion(3);
+                }
+                else
+                {
+                    DisplayQuestion(4);
+                }
+            }
+            else
+            {
+                SaveScore();
+                OpenMainScreen();
+            }
         }
 
         private void SetTimer(int seconds)
@@ -70,22 +121,26 @@ namespace SoftwareEngineeringApp
 
         private void optionA_button_Click(object sender, EventArgs e)
         {
-            //evaluate answer
+            EvaluateAnswer('A');
+            this.ActiveControl = null;  //unfocuses the button
         }
 
         private void optionB_button_Click(object sender, EventArgs e)
         {
-            //evaluate answer
+            EvaluateAnswer('B');
+            this.ActiveControl = null;  //unfocuses the button
         }
 
         private void optionC_button_Click(object sender, EventArgs e)
         {
-            //evaluate answer
+            EvaluateAnswer('C');
+            this.ActiveControl = null;  //unfocuses the button
         }
 
         private void optionD_button_Click(object sender, EventArgs e)
         {
-            //evaluate answer
+            EvaluateAnswer('D');
+            this.ActiveControl = null;  //unfocuses the button
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -102,13 +157,62 @@ namespace SoftwareEngineeringApp
         private void AnsweredIncorrectly()
         {
             timer.Stop();
-            this.Close();
+            SaveScore();
+            OpenMainScreen();
         }
 
         private void AnsweredCorrectly()
         {
             timer.Stop();
-            DisplayQuestion(1);  //needs further implementation
+            userScore+=5;
+            questionNumber++;
+            ChooseQuestion(this.gameDiff, this.questionNumber);
+        }
+
+        private void EvaluateAnswer(char answer)
+        {
+            if (currentQuestion.CheckAnswer(answer))
+            {
+                AnsweredCorrectly();
+            }
+            else
+            {
+                AnsweredIncorrectly();
+            }
+        }
+
+        private void DisplayGameDifficulty(int difficulty)
+        {
+            string textDiff;
+            if (difficulty == 1)
+            {
+                textDiff = "Easy";
+                labelDiff.Text = "Selected difficulty: " + textDiff;
+            }
+            else if (difficulty == 2)
+            {
+                textDiff = "Medium";
+                labelDiff.Text = "Selected difficulty: " + textDiff;
+            }
+
+            else if (difficulty == 3)
+            {
+                textDiff = "Difficult";
+                labelDiff.Text = "Selected difficulty: " + textDiff;
+            }
+        }
+
+        private void SaveScore()
+        {
+            Quiz.highscores[Quiz.currentUsername] = userScore;
+        }
+
+        private void OpenMainScreen()
+        {
+            this.Hide();
+            Form1 mainForm = new Form1(true);
+            mainForm.ShowDialog();
+            this.Close();
         }
     }
 }

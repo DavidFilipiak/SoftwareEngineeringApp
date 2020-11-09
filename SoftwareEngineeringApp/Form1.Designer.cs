@@ -6,12 +6,14 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        
 
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
+            
         {
             if (disposing && (components != null))
             {
@@ -34,6 +36,10 @@
             this.highScores_listBox = new System.Windows.Forms.ListBox();
             this.helpButton = new System.Windows.Forms.Button();
             this.play_button = new System.Windows.Forms.Button();
+            this.diffLabel = new System.Windows.Forms.Label();
+            this.easyRadio = new System.Windows.Forms.RadioButton();
+            this.mediumRadio = new System.Windows.Forms.RadioButton();
+            this.hardRadio = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -53,15 +59,16 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(103, 20);
             this.usernameTextBox.TabIndex = 2;
+            this.usernameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernameTextBox_KeyDown);
             // 
             // usernameButton
             // 
-            this.usernameButton.Location = new System.Drawing.Point(601, 396);
-            this.usernameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usernameButton.Location = new System.Drawing.Point(811, 641);
+            this.usernameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameButton.Name = "usernameButton";
             this.usernameButton.Size = new System.Drawing.Size(118, 28);
             this.usernameButton.TabIndex = 3;
-            this.usernameButton.Text = "Enter the username";
+            this.usernameButton.Text = "Save the name!";
             this.usernameButton.UseVisualStyleBackColor = true;
             this.usernameButton.Click += new System.EventHandler(this.usernameButton_Click);
             // 
@@ -88,8 +95,8 @@
             // 
             // play_button
             // 
-            this.play_button.Location = new System.Drawing.Point(440, 304);
-            this.play_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.play_button.Location = new System.Drawing.Point(828, 343);
+            this.play_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.play_button.Name = "play_button";
             this.play_button.Size = new System.Drawing.Size(90, 42);
             this.play_button.TabIndex = 6;
@@ -98,21 +105,76 @@
             this.play_button.Visible = false;
             this.play_button.Click += new System.EventHandler(this.play_button_Click);
             // 
+            // diffLabel
+            // 
+            this.diffLabel.AutoSize = true;
+            this.diffLabel.Location = new System.Drawing.Point(807, 491);
+            this.diffLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.diffLabel.Name = "diffLabel";
+            this.diffLabel.Size = new System.Drawing.Size(159, 17);
+            this.diffLabel.TabIndex = 8;
+            this.diffLabel.Text = "Please select a difficulty";
+            this.diffLabel.Visible = false;
+            // 
+            // easyRadio
+            // 
+            this.easyRadio.AutoSize = true;
+            this.easyRadio.Location = new System.Drawing.Point(719, 545);
+            this.easyRadio.Margin = new System.Windows.Forms.Padding(4);
+            this.easyRadio.Name = "easyRadio";
+            this.easyRadio.Size = new System.Drawing.Size(60, 21);
+            this.easyRadio.TabIndex = 9;
+            this.easyRadio.TabStop = true;
+            this.easyRadio.Text = "Easy";
+            this.easyRadio.UseVisualStyleBackColor = true;
+            this.easyRadio.Visible = false;
+            // 
+            // mediumRadio
+            // 
+            this.mediumRadio.AutoSize = true;
+            this.mediumRadio.Location = new System.Drawing.Point(847, 545);
+            this.mediumRadio.Margin = new System.Windows.Forms.Padding(4);
+            this.mediumRadio.Name = "mediumRadio";
+            this.mediumRadio.Size = new System.Drawing.Size(78, 21);
+            this.mediumRadio.TabIndex = 10;
+            this.mediumRadio.TabStop = true;
+            this.mediumRadio.Text = "Medium";
+            this.mediumRadio.UseVisualStyleBackColor = true;
+            this.mediumRadio.Visible = false;
+            // 
+            // hardRadio
+            // 
+            this.hardRadio.AutoSize = true;
+            this.hardRadio.Location = new System.Drawing.Point(985, 545);
+            this.hardRadio.Margin = new System.Windows.Forms.Padding(4);
+            this.hardRadio.Name = "hardRadio";
+            this.hardRadio.Size = new System.Drawing.Size(60, 21);
+            this.hardRadio.TabIndex = 11;
+            this.hardRadio.TabStop = true;
+            this.hardRadio.Text = "Hard";
+            this.hardRadio.UseVisualStyleBackColor = true;
+            this.hardRadio.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background___Title;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.Controls.Add(this.hardRadio);
+            this.Controls.Add(this.mediumRadio);
+            this.Controls.Add(this.easyRadio);
+            this.Controls.Add(this.diffLabel);
             this.Controls.Add(this.play_button);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.highScores_listBox);
             this.Controls.Add(this.usernameButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +184,14 @@
 
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Button usernameButton;
+        public System.Windows.Forms.Button usernameButton;
         private System.Windows.Forms.ListBox highScores_listBox;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button play_button;
+        private System.Windows.Forms.Label diffLabel;
+        private System.Windows.Forms.RadioButton easyRadio;
+        private System.Windows.Forms.RadioButton mediumRadio;
+        private System.Windows.Forms.RadioButton hardRadio;
     }
 }
 

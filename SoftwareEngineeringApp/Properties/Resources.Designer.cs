@@ -61,6 +61,16 @@ namespace SoftwareEngineeringApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to david 15
+        ///moon 35.
+        /// </summary>
+        internal static string highscores {
+            get {
+                return ResourceManager.GetString("highscores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap New_Background {
@@ -81,12 +91,52 @@ namespace SoftwareEngineeringApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to david 15
-        ///moon 35.
+        ///   Looks up a localized string similar to 2
+        ///Which of these is a programming language?
+        ///Cobra
+        ///Byte 
+        ///C# 
+        ///Logic +
+        ///C
+        ///*
+        ///3
+        ///In the system life cycle what is after the design stage? 
+        ///Planning  
+        ///Implementation 
+        ///Evaluation
+        ///Testing 
+        ///B
+        ///*
+        ///1
+        ///How many bits in 3 bytes? 
+        ///8
+        ///11
+        ///24
+        ///32
+        ///C
+        ///*
+        ///3
+        ///What is an example of secondary memory? 
+        ///USB Flash drive
+        ///ROM
+        ///RAM
+        ///Processor 
+        ///A
+        ///*
+        ///3
+        ///An entity in ER model is a real world being, which has some properties called? 
+        ///Attributes
+        ///Relationships 
+        ///HTTPS
+        ///None of the Above
+        ///A
+        ///*
+        ///2
+        ///Minecraft on PC is coded [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string highscores {
+        internal static string questions {
             get {
-                return ResourceManager.GetString("highscores", resourceCulture);
+                return ResourceManager.GetString("questions", resourceCulture);
             }
         }
     }
