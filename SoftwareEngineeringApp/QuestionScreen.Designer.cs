@@ -39,11 +39,16 @@
             this.score_label = new System.Windows.Forms.Label();
             this.questionNumber_label = new System.Windows.Forms.Label();
             this.labelDiff = new System.Windows.Forms.Label();
+            this.helplinesGroupbox = new System.Windows.Forms.GroupBox();
+            this.help5050button = new System.Windows.Forms.Button();
+            this.helpStopTimebutton = new System.Windows.Forms.Button();
+            this.helpNewQbutton = new System.Windows.Forms.Button();
+            this.helplinesGroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // optionA_button
             // 
-            this.optionA_button.Location = new System.Drawing.Point(12, 349);
+            this.optionA_button.Location = new System.Drawing.Point(12, 297);
             this.optionA_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionA_button.Name = "optionA_button";
             this.optionA_button.Size = new System.Drawing.Size(600, 130);
@@ -54,7 +59,7 @@
             // 
             // optionB_button
             // 
-            this.optionB_button.Location = new System.Drawing.Point(652, 349);
+            this.optionB_button.Location = new System.Drawing.Point(652, 297);
             this.optionB_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionB_button.Name = "optionB_button";
             this.optionB_button.Size = new System.Drawing.Size(600, 130);
@@ -65,7 +70,7 @@
             // 
             // optionC_button
             // 
-            this.optionC_button.Location = new System.Drawing.Point(12, 494);
+            this.optionC_button.Location = new System.Drawing.Point(12, 442);
             this.optionC_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionC_button.Name = "optionC_button";
             this.optionC_button.Size = new System.Drawing.Size(600, 130);
@@ -76,7 +81,7 @@
             // 
             // optionD_button
             // 
-            this.optionD_button.Location = new System.Drawing.Point(652, 494);
+            this.optionD_button.Location = new System.Drawing.Point(652, 442);
             this.optionD_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionD_button.Name = "optionD_button";
             this.optionD_button.Size = new System.Drawing.Size(600, 130);
@@ -89,7 +94,7 @@
             // 
             this.question_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.question_label.AutoSize = true;
-            this.question_label.Location = new System.Drawing.Point(588, 275);
+            this.question_label.Location = new System.Drawing.Point(588, 223);
             this.question_label.Name = "question_label";
             this.question_label.Size = new System.Drawing.Size(95, 17);
             this.question_label.TabIndex = 4;
@@ -121,7 +126,7 @@
             // questionNumber_label
             // 
             this.questionNumber_label.AutoSize = true;
-            this.questionNumber_label.Location = new System.Drawing.Point(588, 9);
+            this.questionNumber_label.Location = new System.Drawing.Point(387, 9);
             this.questionNumber_label.Name = "questionNumber_label";
             this.questionNumber_label.Size = new System.Drawing.Size(114, 17);
             this.questionNumber_label.TabIndex = 5;
@@ -130,18 +135,59 @@
             // labelDiff
             // 
             this.labelDiff.AutoSize = true;
-            this.labelDiff.Location = new System.Drawing.Point(576, 655);
+            this.labelDiff.Location = new System.Drawing.Point(771, 9);
             this.labelDiff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDiff.Name = "labelDiff";
             this.labelDiff.Size = new System.Drawing.Size(126, 17);
             this.labelDiff.TabIndex = 7;
             this.labelDiff.Text = "Selected difficulty: ";
             // 
+            // helplinesGroupbox
+            // 
+            this.helplinesGroupbox.Controls.Add(this.helpNewQbutton);
+            this.helplinesGroupbox.Controls.Add(this.helpStopTimebutton);
+            this.helplinesGroupbox.Controls.Add(this.help5050button);
+            this.helplinesGroupbox.Location = new System.Drawing.Point(12, 590);
+            this.helplinesGroupbox.Name = "helplinesGroupbox";
+            this.helplinesGroupbox.Size = new System.Drawing.Size(1240, 87);
+            this.helplinesGroupbox.TabIndex = 8;
+            this.helplinesGroupbox.TabStop = false;
+            this.helplinesGroupbox.Text = "HELPLINES";
+            // 
+            // help5050button
+            // 
+            this.help5050button.Location = new System.Drawing.Point(77, 21);
+            this.help5050button.Name = "help5050button";
+            this.help5050button.Size = new System.Drawing.Size(200, 58);
+            this.help5050button.TabIndex = 0;
+            this.help5050button.Text = "50 / 50";
+            this.help5050button.UseVisualStyleBackColor = true;
+            this.help5050button.Click += new System.EventHandler(this.help5050button_Click);
+            // 
+            // helpStopTimebutton
+            // 
+            this.helpStopTimebutton.Location = new System.Drawing.Point(499, 21);
+            this.helpStopTimebutton.Name = "helpStopTimebutton";
+            this.helpStopTimebutton.Size = new System.Drawing.Size(220, 57);
+            this.helpStopTimebutton.TabIndex = 1;
+            this.helpStopTimebutton.Text = "Stop Time";
+            this.helpStopTimebutton.UseVisualStyleBackColor = true;
+            // 
+            // helpNewQbutton
+            // 
+            this.helpNewQbutton.Location = new System.Drawing.Point(969, 21);
+            this.helpNewQbutton.Name = "helpNewQbutton";
+            this.helpNewQbutton.Size = new System.Drawing.Size(206, 57);
+            this.helpNewQbutton.TabIndex = 2;
+            this.helpNewQbutton.Text = "New Question";
+            this.helpNewQbutton.UseVisualStyleBackColor = true;
+            // 
             // QuestionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.helplinesGroupbox);
             this.Controls.Add(this.labelDiff);
             this.Controls.Add(this.score_label);
             this.Controls.Add(this.timer_label);
@@ -155,6 +201,7 @@
             this.Name = "QuestionScreen";
             this.Text = "QuestionScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
+            this.helplinesGroupbox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +219,9 @@
         private System.Windows.Forms.Label questionNumber_label;
         private System.Windows.Forms.Label labelDiff;
         private System.Windows.Forms.Label score_label;
+        private System.Windows.Forms.GroupBox helplinesGroupbox;
+        private System.Windows.Forms.Button helpNewQbutton;
+        private System.Windows.Forms.Button helpStopTimebutton;
+        private System.Windows.Forms.Button help5050button;
     }
 }

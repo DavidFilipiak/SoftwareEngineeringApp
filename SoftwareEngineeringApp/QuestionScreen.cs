@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -158,6 +159,7 @@ namespace SoftwareEngineeringApp
         {
             timer.Stop();
             SaveScore();
+            EnableButtons();
             OpenMainScreen();
         }
 
@@ -167,6 +169,15 @@ namespace SoftwareEngineeringApp
             userScore+=5;
             questionNumber++;
             ChooseQuestion(this.gameDiff, this.questionNumber);
+            EnableButtons();
+        }
+
+        private void EnableButtons()
+        {
+            this.optionA_button.Enabled = true;
+            this.optionB_button.Enabled = true;
+            this.optionC_button.Enabled = true;
+            this.optionD_button.Enabled = true;
         }
 
         private void EvaluateAnswer(char answer)
@@ -213,6 +224,52 @@ namespace SoftwareEngineeringApp
             Form1 mainForm = new Form1(true);
             mainForm.ShowDialog();
             this.Close();
+        }
+
+        private void help5050button_Click(object sender, EventArgs e)
+        {
+            char[] allOptions = { 'A', 'B', 'C', 'D' };
+            char[] enabledOptions = new char[2];
+            char[] disabledOptions = new char[2];
+            enabledOptions[0] = this.currentQuestion.CorrectAnswer;
+            char secondAnswer;
+            do
+            {
+                secondAnswer = GetRandomAnswer();
+            }
+            while (enabledOptions[0] == secondAnswer);
+            enabledOptions[1] = secondAnswer;
+
+            int wrongOptionCounter = 0;
+            for(int i = 0; i < 4; i++)
+            {
+                if (!enabledOptions.Contains(allOptions[i]))
+                {
+                    disabledOptions[wrongOptionCounter] = allOptions[i];
+                    wrongOptionCounter++;
+                }
+            }
+
+            foreach (char option in disabledOptions)
+            {
+                if (option == 'A') this.optionA_button.Enabled = false;
+                else if (option == 'B') this.optionB_button.Enabled = false;
+                else if (option == 'C') this.optionC_button.Enabled = false;
+                else if (option == 'D') this.optionD_button.Enabled = false;
+            }
+            
+            help5050button.Enabled = false;
+        }
+
+        private char GetRandomAnswer()
+        {
+            Random rand = new Random();
+            int randomAnswer = rand.Next(4);
+
+            if (randomAnswer == 0) return 'A';
+            else if (randomAnswer == 1) return 'B';
+            else if (randomAnswer == 2) return 'C';
+            else return 'D';
         }
     }
 }
