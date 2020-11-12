@@ -271,5 +271,11 @@ namespace SoftwareEngineeringApp
             else if (randomAnswer == 2) return 'C';
             else return 'D';
         }
+
+        private void helpStopTimebutton_Click(object sender, EventArgs e)
+        {
+            this.timer.Stop();
+            this.helpStopTimebutton.Enabled = false;
+        }
     }
 }

@@ -40,9 +40,9 @@
             this.questionNumber_label = new System.Windows.Forms.Label();
             this.labelDiff = new System.Windows.Forms.Label();
             this.helplinesGroupbox = new System.Windows.Forms.GroupBox();
-            this.help5050button = new System.Windows.Forms.Button();
-            this.helpStopTimebutton = new System.Windows.Forms.Button();
             this.helpNewQbutton = new System.Windows.Forms.Button();
+            this.helpStopTimebutton = new System.Windows.Forms.Button();
+            this.help5050button = new System.Windows.Forms.Button();
             this.helplinesGroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,15 +154,14 @@
             this.helplinesGroupbox.TabStop = false;
             this.helplinesGroupbox.Text = "HELPLINES";
             // 
-            // help5050button
+            // helpNewQbutton
             // 
-            this.help5050button.Location = new System.Drawing.Point(77, 21);
-            this.help5050button.Name = "help5050button";
-            this.help5050button.Size = new System.Drawing.Size(200, 58);
-            this.help5050button.TabIndex = 0;
-            this.help5050button.Text = "50 / 50";
-            this.help5050button.UseVisualStyleBackColor = true;
-            this.help5050button.Click += new System.EventHandler(this.help5050button_Click);
+            this.helpNewQbutton.Location = new System.Drawing.Point(969, 21);
+            this.helpNewQbutton.Name = "helpNewQbutton";
+            this.helpNewQbutton.Size = new System.Drawing.Size(206, 57);
+            this.helpNewQbutton.TabIndex = 2;
+            this.helpNewQbutton.Text = "New Question";
+            this.helpNewQbutton.UseVisualStyleBackColor = true;
             // 
             // helpStopTimebutton
             // 
@@ -172,15 +171,17 @@
             this.helpStopTimebutton.TabIndex = 1;
             this.helpStopTimebutton.Text = "Stop Time";
             this.helpStopTimebutton.UseVisualStyleBackColor = true;
+            this.helpStopTimebutton.Click += new System.EventHandler(this.helpStopTimebutton_Click);
             // 
-            // helpNewQbutton
+            // help5050button
             // 
-            this.helpNewQbutton.Location = new System.Drawing.Point(969, 21);
-            this.helpNewQbutton.Name = "helpNewQbutton";
-            this.helpNewQbutton.Size = new System.Drawing.Size(206, 57);
-            this.helpNewQbutton.TabIndex = 2;
-            this.helpNewQbutton.Text = "New Question";
-            this.helpNewQbutton.UseVisualStyleBackColor = true;
+            this.help5050button.Location = new System.Drawing.Point(77, 21);
+            this.help5050button.Name = "help5050button";
+            this.help5050button.Size = new System.Drawing.Size(200, 58);
+            this.help5050button.TabIndex = 0;
+            this.help5050button.Text = "50 / 50";
+            this.help5050button.UseVisualStyleBackColor = true;
+            this.help5050button.Click += new System.EventHandler(this.help5050button_Click);
             // 
             // QuestionScreen
             // 
