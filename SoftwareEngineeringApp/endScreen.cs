@@ -29,9 +29,16 @@ namespace SoftwareEngineeringApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 homeForm = new Form1();
-            homeForm.Show();
+            OpenMainScreen();
 
+        }
+
+        private void OpenMainScreen()
+        {
+            this.Hide();
+            Form1 mainForm = new Form1(true);
+            mainForm.ShowDialog();
+            this.Close();
         }
 
     }

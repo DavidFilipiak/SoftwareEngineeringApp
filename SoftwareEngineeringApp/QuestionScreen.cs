@@ -110,7 +110,7 @@ namespace SoftwareEngineeringApp
             else
             {
                 SaveScore();
-                OpenMainScreen();
+                gameOver();
             }
         }
 
@@ -158,7 +158,7 @@ namespace SoftwareEngineeringApp
         {
             timer.Stop();
             SaveScore();
-            OpenMainScreen();
+            gameOver();
         }
 
         private void AnsweredCorrectly()
@@ -207,11 +207,11 @@ namespace SoftwareEngineeringApp
             Quiz.highscores[Quiz.currentUsername] = userScore;
         }
 
-        private void OpenMainScreen()
+        private void gameOver()
         {
             this.Hide();
-            Form1 mainForm = new Form1(true);
-            mainForm.ShowDialog();
+            endScreen endForm = new endScreen();
+            endForm.ShowDialog();
             this.Close();
         }
     }
