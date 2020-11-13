@@ -169,7 +169,7 @@
             this.helpStopTimebutton.Name = "helpStopTimebutton";
             this.helpStopTimebutton.Size = new System.Drawing.Size(220, 57);
             this.helpStopTimebutton.TabIndex = 1;
-            this.helpStopTimebutton.Text = "Stop Time";
+            this.helpStopTimebutton.Text = "Stop Timer";
             this.helpStopTimebutton.UseVisualStyleBackColor = true;
             this.helpStopTimebutton.Click += new System.EventHandler(this.helpStopTimebutton_Click);
             // 
