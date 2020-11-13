@@ -72,13 +72,13 @@ namespace SoftwareEngineeringApp
             //checks if the username already exists, and if yes, asks if the user wants to rewrite the existing score
             if (oldUser)
             {
-                DialogResult result = MessageBox.Show("The user with entered username already exists. Continuing will overwrite the saved data.\nDo you want to continue?", "Existing User", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("The user with entered username already exists. \nSelect \'Yes\' if you want to overwrite it with 0 points.\nSelect \'No\' if you want to continue with the save score.", "Existing User", MessageBoxButtons.YesNoCancel);
 
                 if (result == DialogResult.Yes)
                 {
                     highscores[username] = 0;
                 }
-                else
+                else if (result == DialogResult.Cancel)
                 {
                     return false;
                 }
