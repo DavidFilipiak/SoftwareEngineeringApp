@@ -19,6 +19,7 @@ namespace SoftwareEngineeringApp
         private static int time = 20;
         Question currentQuestion;
         private int gameDiff;
+        private bool gameWon;
 
         private List<Question> usedQuestions = new List<Question>();
      
@@ -26,12 +27,15 @@ namespace SoftwareEngineeringApp
         public QuestionScreen(int gameDifficulty)
         {
             InitializeComponent();
+           
             this.ActiveControl = null;
             this.gameDiff = gameDifficulty;
             DisplayGameDifficulty(gameDifficulty);
             userScore = 0;
+            gameWon = false;
             timer.Interval = 1000;
             ChooseQuestion(this.gameDiff, this.questionNumber);
+            IsGameWon();
         }
 
         private void QuestionScreen_FormClosing(object sender, EventArgs e)
@@ -213,6 +217,39 @@ namespace SoftwareEngineeringApp
             Form1 mainForm = new Form1(true);
             mainForm.ShowDialog();
             this.Close();
+        }
+
+        private void IsGameWon()
+        {
+
+
+            if (userScore >= 150 && gameDiff == 1)
+            {
+                gameWon = true;
+                WinGame();
+            }
+            else if (userScore >= 250 && gameDiff == 2)
+            {
+                gameWon = true;
+                WinGame();
+            }
+            else if (userScore >= 400 && gameDiff == 3)
+            {
+                gameWon = true;
+                WinGame();
+            }
+            else {
+                gameWon = false;
+            }
+        }
+
+         public void WinGame()
+        {
+                this.Hide();
+                victoryScreen winForm = new victoryScreen();
+                winForm.ShowDialog();
+                this.Close();
+            
         }
     }
 }
