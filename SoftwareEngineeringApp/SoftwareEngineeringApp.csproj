@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="endScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="endScreen.Designer.cs">
+      <DependentUpon>endScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
       <DependentUpon>QuestionScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Quiz.cs" />
+    <EmbeddedResource Include="endScreen.resx">
+      <DependentUpon>endScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +122,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New Background + Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="endScreen.png" />
+    <Content Include="Resources\endScreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

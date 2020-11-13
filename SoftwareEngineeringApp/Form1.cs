@@ -19,7 +19,7 @@ namespace SoftwareEngineeringApp
         {
             InitializeComponent();
             //highscores.Add("david", 0); // line for testing
-            
+
             Quiz.LoadHighScoresFromFile();
             Quiz.LoadQuestionsFromFile();
 
@@ -27,7 +27,7 @@ namespace SoftwareEngineeringApp
 
             DisplayHighScores();
         }
-            
+
 
         public Form1(bool fromQuestionScreen)
         {
@@ -39,7 +39,7 @@ namespace SoftwareEngineeringApp
         public void usernameButton_Click(object sender, EventArgs e)
         {
             string usernameEntered = usernameTextBox.Text;
-            if(AddUsernameToDictionary(usernameEntered))
+            if (AddUsernameToDictionary(usernameEntered))
             {
                 ContinueToMainWindow();
             }
@@ -47,7 +47,7 @@ namespace SoftwareEngineeringApp
 
         private void usernameTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 string usernameEntered = usernameTextBox.Text;
                 if (AddUsernameToDictionary(usernameEntered))
@@ -61,8 +61,8 @@ namespace SoftwareEngineeringApp
         {
             Quiz.SaveHighscoresToFile();
         }
-            
-        
+
+
 
         private bool AddUsernameToDictionary(string username)
         {
@@ -104,10 +104,10 @@ namespace SoftwareEngineeringApp
             easyRadio.Checked = true;
 
             DisplayHighScores();
-            
+
             highScores_listBox.Show();
             play_button.Show();
-            
+
         }
 
         private void helpButton_Click(object sender, EventArgs e)
@@ -148,5 +148,14 @@ namespace SoftwareEngineeringApp
                 highScores_listBox.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
             }
         }
+
+        private void highScores_listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
+  
+

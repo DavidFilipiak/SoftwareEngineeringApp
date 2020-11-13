@@ -20,6 +20,8 @@ namespace SoftwareEngineeringApp
         public static Dictionary<string, int> highscores = new Dictionary<string, int>();
         public static string currentUsername;
 
+        public static bool gameOver = false;
+
         public static bool highscoresLoaded = false;
         public static bool questionsLoaded = false;
 
