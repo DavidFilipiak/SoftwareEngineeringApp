@@ -41,19 +41,15 @@ namespace SoftwareEngineeringApp
             this.Close();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void DisplayHighScores()
         {
-            listBox1.Items.Clear();
+            listBox2.Items.Clear();
             //displays all scores in the highscores dictionary sorted from highest to lowest (to be added, below is the link). 
             //The link to the the source of the solution:
             //https://www.c-sharpcorner.com/UploadFile/mahesh/sort-a-dictionary-by-value-in-C-Sharp/
             foreach (var usernameHighscore in highScores.OrderByDescending(key => key.Value))
             {
-                listBox1.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
+                listBox2.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
             }
         }
 
