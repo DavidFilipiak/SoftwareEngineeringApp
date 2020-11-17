@@ -277,5 +277,22 @@ namespace SoftwareEngineeringApp
             this.timer.Stop();
             this.helpStopTimebutton.Enabled = false;
         }
+
+        private void helpNewQbutton_Click(object sender, EventArgs e)
+        {
+            if (Quiz.questionsLvl3.Contains(this.currentQuestion))
+            {
+                this.DisplayQuestion(2);
+            }
+            else if (Quiz.questionsLvl4.Contains(this.currentQuestion))
+            {
+                this.DisplayQuestion(3);
+            }
+            else
+            {
+                this.DisplayQuestion(1);
+            }
+            this.helpNewQbutton.Enabled = false;
+        }
     }
 }

@@ -162,6 +162,7 @@
             this.helpNewQbutton.TabIndex = 2;
             this.helpNewQbutton.Text = "New Question";
             this.helpNewQbutton.UseVisualStyleBackColor = true;
+            this.helpNewQbutton.Click += new System.EventHandler(this.helpNewQbutton_Click);
             // 
             // helpStopTimebutton
             // 
