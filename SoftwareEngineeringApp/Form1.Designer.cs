@@ -94,13 +94,15 @@
             // 
             // helpButton
             // 
+            this.helpButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.helpButton.Font = new System.Drawing.Font("Lucida Bright", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpButton.Location = new System.Drawing.Point(16, 15);
             this.helpButton.Margin = new System.Windows.Forms.Padding(4);
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(115, 34);
+            this.helpButton.Size = new System.Drawing.Size(150, 50);
             this.helpButton.TabIndex = 5;
             this.helpButton.Text = "Need help?";
-            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.UseVisualStyleBackColor = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // play_button
