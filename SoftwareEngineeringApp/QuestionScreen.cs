@@ -32,6 +32,14 @@ namespace SoftwareEngineeringApp
             userScore = 0;
             timer.Interval = 1000;
             ChooseQuestion(this.gameDiff, this.questionNumber);
+            optionA_button.MouseEnter += OnMouseEnterButton1;
+            optionA_button.MouseLeave += OnMouseLeaveButton1;
+            optionB_button.MouseEnter += OnMouseEnterButton2;
+            optionB_button.MouseLeave += OnMouseLeaveButton2;
+            optionC_button.MouseEnter += OnMouseEnterButton3;
+            optionC_button.MouseLeave += OnMouseLeaveButton3;
+            optionD_button.MouseEnter += OnMouseEnterButton4;
+            optionD_button.MouseLeave += OnMouseLeaveButton4;
         }
 
         private void QuestionScreen_FormClosing(object sender, EventArgs e)
@@ -119,6 +127,38 @@ namespace SoftwareEngineeringApp
             time = seconds;
         }
 
+        private void OnMouseEnterButton1(object sender, EventArgs e)
+        {
+            optionA_button.BackColor = Color.LightSeaGreen; //Changes colour of button to Light Sea Green
+        }
+        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        {
+            optionA_button.BackColor = SystemColors.ButtonFace; //Reverts the colour to the original grey
+        }
+        private void OnMouseEnterButton2(object sender, EventArgs e) //Changes colour of button to Light Sea Green
+        {
+            optionB_button.BackColor = Color.LightSeaGreen; ;
+        }
+        private void OnMouseLeaveButton2(object sender, EventArgs e) //Reverts the colour to the original grey
+        {
+            optionB_button.BackColor = SystemColors.ButtonFace;
+        }
+        private void OnMouseEnterButton3(object sender, EventArgs e) //Changes colour of button to Light Sea Green
+        {
+            optionC_button.BackColor = Color.LightSeaGreen; ;
+        }
+        private void OnMouseLeaveButton3(object sender, EventArgs e) //Reverts the colour to the original grey
+        {
+            optionC_button.BackColor = SystemColors.ButtonFace;
+        }
+        private void OnMouseEnterButton4(object sender, EventArgs e) //Changes colour of button to Light Sea Green
+        {
+            optionD_button.BackColor = Color.LightSeaGreen; ;
+        }
+        private void OnMouseLeaveButton4(object sender, EventArgs e) //Reverts the colour to the original grey
+        {
+            optionD_button.BackColor = SystemColors.ButtonFace;
+        }
         private void optionA_button_Click(object sender, EventArgs e)
         {
             EvaluateAnswer('A');

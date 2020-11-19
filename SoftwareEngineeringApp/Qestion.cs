@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace SoftwareEngineeringApp
 {
@@ -54,8 +55,18 @@ namespace SoftwareEngineeringApp
         {
             if (givenAnswerNumber == correctAnswer)
             {
+                SoundPlayer correctSound = new SoundPlayer("correctBell.wav");
+                correctSound.PlaySync();
                 return true;
             }
+            else if (givenAnswerNumber != correctAnswer)
+            {
+                SoundPlayer incorrectSound = new SoundPlayer("wrongAns.wav");
+                incorrectSound.PlaySync();
+                return false;
+
+            }
+
             else return false;
         }
     }
