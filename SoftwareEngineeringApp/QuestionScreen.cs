@@ -35,10 +35,8 @@ namespace SoftwareEngineeringApp
             this.gameDiff = gameDifficulty;
             DisplayGameDifficulty(gameDifficulty);
             userScore = 0;
-            gameWon = false;
             timer.Interval = 1000;
             ChooseQuestion(this.gameDiff, this.questionNumber);
-            IsGameWon();
         }
 
         private void QuestionScreen_FormClosing(object sender, EventArgs e)
@@ -215,7 +213,14 @@ namespace SoftwareEngineeringApp
 
             if (this.correctAnswerGiven)
             {
-                ChooseQuestion(this.gameDiff, this.questionNumber);
+                if(this.userScore == 10)
+                {
+                    WinGame();
+                }
+                else
+                {
+                    ChooseQuestion(this.gameDiff, this.questionNumber);
+                }
             }
             else
             {
@@ -351,8 +356,6 @@ namespace SoftwareEngineeringApp
 
         private void IsGameWon()
         {
-
-
             if (userScore >= 150 && gameDiff == 1)
             {
                 gameFinished = true;
@@ -373,13 +376,12 @@ namespace SoftwareEngineeringApp
             }
         }
 
-         public void WinGame()
+        public void WinGame()
         {
-                this.Hide();
-                victoryScreen winForm = new victoryScreen();
-                winForm.ShowDialog();
-                this.Close();
-            
+            this.Hide();
+            victoryScreen winForm = new victoryScreen();
+            winForm.ShowDialog();
+            this.Close();           
         }
     }
 }
