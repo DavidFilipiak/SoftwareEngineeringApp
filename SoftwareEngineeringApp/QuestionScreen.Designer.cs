@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionScreen));
             this.optionA_button = new System.Windows.Forms.Button();
             this.optionB_button = new System.Windows.Forms.Button();
             this.optionC_button = new System.Windows.Forms.Button();
@@ -172,7 +173,7 @@
             this.labelDiff.Location = new System.Drawing.Point(864, 11);
             this.labelDiff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDiff.Name = "labelDiff";
-            this.labelDiff.Size = new System.Drawing.Size(126, 17);
+            this.labelDiff.Size = new System.Drawing.Size(96, 13);
             this.labelDiff.TabIndex = 7;
             this.labelDiff.Text = "Selected difficulty: ";
             // 
@@ -246,7 +247,7 @@
             // 
             // QuestionScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -258,6 +259,12 @@
             this.Controls.Add(this.timer_label);
             this.Controls.Add(this.questionNumber_label);
             this.Controls.Add(this.question_label);
+            this.Controls.Add(this.optionD_button);
+            this.Controls.Add(this.optionC_button);
+            this.Controls.Add(this.optionB_button);
+            this.Controls.Add(this.optionA_button);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuestionScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

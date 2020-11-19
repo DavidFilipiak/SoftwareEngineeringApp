@@ -30,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameButton = new System.Windows.Forms.Button();
@@ -188,7 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background___Title;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.hardRadio);
             this.Controls.Add(this.mediumRadio);
             this.Controls.Add(this.easyRadio);
@@ -199,6 +200,7 @@
             this.Controls.Add(this.usernameButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
