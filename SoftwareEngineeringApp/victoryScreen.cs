@@ -12,7 +12,7 @@ namespace SoftwareEngineeringApp
 {
     public partial class victoryScreen : Form
     {
-        public Dictionary<String, int> highScores;
+        private Dictionary<String, int> highScores;
 
         public victoryScreen()
         {
@@ -23,8 +23,7 @@ namespace SoftwareEngineeringApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-             OpenMainScreen();
-           
+             OpenMainScreen();           
         }
 
 

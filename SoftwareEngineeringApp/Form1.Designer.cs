@@ -41,6 +41,7 @@
             this.easyRadio = new System.Windows.Forms.RadioButton();
             this.mediumRadio = new System.Windows.Forms.RadioButton();
             this.hardRadio = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -59,7 +60,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(1045, 550);
+            this.usernameTextBox.Location = new System.Drawing.Point(1002, 546);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(279, 35);
@@ -71,10 +72,10 @@
             this.usernameButton.BackColor = System.Drawing.SystemColors.Info;
             this.usernameButton.Font = new System.Drawing.Font("Lucida Bright", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.usernameButton.Location = new System.Drawing.Point(1001, 751);
+            this.usernameButton.Location = new System.Drawing.Point(952, 748);
             this.usernameButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.usernameButton.Name = "usernameButton";
-            this.usernameButton.Size = new System.Drawing.Size(372, 50);
+            this.usernameButton.Size = new System.Drawing.Size(386, 75);
             this.usernameButton.TabIndex = 3;
             this.usernameButton.Text = "Save the name!";
             this.usernameButton.UseVisualStyleBackColor = false;
@@ -99,7 +100,7 @@
             this.helpButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.helpButton.Font = new System.Drawing.Font("Lucida Bright", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpButton.Location = new System.Drawing.Point(21, 18);
-            this.helpButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.helpButton.Margin = new System.Windows.Forms.Padding(5);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(200, 62);
             this.helpButton.TabIndex = 5;
@@ -112,7 +113,7 @@
             this.play_button.BackColor = System.Drawing.SystemColors.Info;
             this.play_button.Font = new System.Drawing.Font("Lucida Bright", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.play_button.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.play_button.Location = new System.Drawing.Point(1045, 352);
+            this.play_button.Location = new System.Drawing.Point(1018, 352);
             this.play_button.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.play_button.Name = "play_button";
             this.play_button.Size = new System.Drawing.Size(280, 142);
@@ -143,7 +144,7 @@
             this.easyRadio.Font = new System.Drawing.Font("Lucida Bright", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.easyRadio.ForeColor = System.Drawing.Color.Yellow;
             this.easyRadio.Location = new System.Drawing.Point(885, 647);
-            this.easyRadio.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.easyRadio.Margin = new System.Windows.Forms.Padding(5);
             this.easyRadio.Name = "easyRadio";
             this.easyRadio.Size = new System.Drawing.Size(115, 41);
             this.easyRadio.TabIndex = 9;
@@ -159,7 +160,7 @@
             this.mediumRadio.Font = new System.Drawing.Font("Lucida Bright", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mediumRadio.ForeColor = System.Drawing.Color.Yellow;
             this.mediumRadio.Location = new System.Drawing.Point(1069, 647);
-            this.mediumRadio.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mediumRadio.Margin = new System.Windows.Forms.Padding(5);
             this.mediumRadio.Name = "mediumRadio";
             this.mediumRadio.Size = new System.Drawing.Size(175, 41);
             this.mediumRadio.TabIndex = 10;
@@ -175,7 +176,7 @@
             this.hardRadio.Font = new System.Drawing.Font("Lucida Bright", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hardRadio.ForeColor = System.Drawing.Color.Yellow;
             this.hardRadio.Location = new System.Drawing.Point(1335, 647);
-            this.hardRadio.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.hardRadio.Margin = new System.Windows.Forms.Padding(5);
             this.hardRadio.Name = "hardRadio";
             this.hardRadio.Size = new System.Drawing.Size(120, 41);
             this.hardRadio.TabIndex = 11;
@@ -184,13 +185,27 @@
             this.hardRadio.UseVisualStyleBackColor = false;
             this.hardRadio.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 72F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(480, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1108, 155);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "C Who\'s Sharper";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background___Title;
+            this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1827, 922);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.hardRadio);
             this.Controls.Add(this.mediumRadio);
             this.Controls.Add(this.easyRadio);
@@ -225,6 +240,7 @@
         private System.Windows.Forms.RadioButton easyRadio;
         private System.Windows.Forms.RadioButton mediumRadio;
         private System.Windows.Forms.RadioButton hardRadio;
+        private System.Windows.Forms.Label label1;
     }
 }
 

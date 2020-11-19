@@ -16,12 +16,10 @@ namespace SoftwareEngineeringApp
     {
         private int questionNumber = 1;
         private int userScore = 0;
-        //private static int difficulty; //data type can be changed
         private static int time = 20;
         Question currentQuestion;
         private int gameDiff;
         Button pressedButton = new Button();
-        private bool gameFinished;
 
         private List<Question> usedQuestions = new List<Question>();
         Timer timer2 = new Timer();
@@ -168,7 +166,6 @@ namespace SoftwareEngineeringApp
             timer.Stop();
             ChangeButtonColour(this.pressedButton, false);
             CreateTimer2();
-            SaveScore();
         }
 
         private void AnsweredCorrectly()
@@ -279,6 +276,7 @@ namespace SoftwareEngineeringApp
 
         private void gameOver()
         {
+            SaveScore();
             this.Hide();
             endScreen endForm = new endScreen();
             endForm.ShowDialog();
@@ -354,30 +352,9 @@ namespace SoftwareEngineeringApp
             this.helpNewQbutton.Enabled = false;
         }
 
-        private void IsGameWon()
-        {
-            if (userScore >= 150 && gameDiff == 1)
-            {
-                gameFinished = true;
-                WinGame();
-            }
-            else if (userScore >= 250 && gameDiff == 2)
-            {
-                gameFinished = true;
-                WinGame();
-            }
-            else if (userScore >= 400 && gameDiff == 3)
-            {
-                gameFinished = true;
-                WinGame();
-            }
-            else {
-                this.gameFinished = false;
-            }
-        }
-
         public void WinGame()
         {
+            SaveScore();
             this.Hide();
             victoryScreen winForm = new victoryScreen();
             winForm.ShowDialog();
