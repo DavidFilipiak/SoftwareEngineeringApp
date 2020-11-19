@@ -23,7 +23,7 @@ namespace SoftwareEngineeringApp
         Button pressedButton = new Button();
         private List<Question> usedQuestions = new List<Question>();
         Timer timer2 = new Timer();
-
+        private bool correctAnswerGiven;
 
         public QuestionScreen(int gameDifficulty)
         {
@@ -163,20 +163,60 @@ namespace SoftwareEngineeringApp
         private void AnsweredIncorrectly()
         {
             timer.Stop();
-            ColourChangeIncorrect(this.pressedButton);
+            ChangeButtonColour(this.pressedButton, false);
+            CreateTimer2();
             SaveScore();
-            EnableButtons();
-            OpenMainScreen();
         }
 
         private void AnsweredCorrectly()
         {
-
             timer.Stop();
-            ColourChangeCorrect(this.pressedButton);
+            ChangeButtonColour(this.pressedButton, true);
             userScore += 5;
             questionNumber++;
-            ChooseQuestion(this.gameDiff, this.questionNumber);
+            CreateTimer2();
+        }
+
+        private void ChangeButtonColour(Button button, bool correctAnswer)
+        {
+            if (correctAnswer)
+            {
+                button.BackColor = Color.Green;
+                button.Update();
+            }
+            else
+            {
+                button.BackColor = Color.Red;
+                button.Update();
+
+                if (this.currentQuestion.CorrectAnswer == 'A') this.ChangeButtonColour(this.optionA_button, true);
+                else if (this.currentQuestion.CorrectAnswer == 'B') this.ChangeButtonColour(this.optionB_button, true);
+                else if (this.currentQuestion.CorrectAnswer == 'C') this.ChangeButtonColour(this.optionC_button, true);
+                else this.ChangeButtonColour(this.optionD_button, true);
+            }
+        }
+
+        private void CreateTimer2()
+        {
+            timer2.Tick += new EventHandler(timer2_Tick);
+            timer2.Interval = 500;
+            timer2.Start();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Stop();
+            this.pressedButton.BackColor = SystemColors.Info;
+
+            if (this.correctAnswerGiven)
+            {
+                ChooseQuestion(this.gameDiff, this.questionNumber);
+            }
+            else
+            {
+                OpenMainScreen();
+            }
+
             EnableButtons();
         }
 
@@ -190,7 +230,8 @@ namespace SoftwareEngineeringApp
 
         private void EvaluateAnswer(char answer)
         {
-            if (currentQuestion.CheckAnswer(answer))
+            this.correctAnswerGiven = currentQuestion.CheckAnswer(answer);
+            if (this.correctAnswerGiven)
             {
                 AnsweredCorrectly();
             }
@@ -301,31 +342,6 @@ namespace SoftwareEngineeringApp
                 this.DisplayQuestion(1);
             }
             this.helpNewQbutton.Enabled = false;
-        }
-
-        private void ColourChangeCorrect(Button button)
-        {
-            button.BackColor = Color.Green;
-            button.Update();
-
-            timer2.Tick += new EventHandler(timer2_Tick);
-            timer2.Interval = 200;
-            timer2.Start();
-        }
-        private void ColourChangeIncorrect(Button button)
-        {
-            button.BackColor = Color.Red;
-            button.Update();
-
-            timer2.Tick += new EventHandler(timer2_Tick);
-            timer2.Interval = 200;
-            timer2.Start();
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            timer2.Stop();
-            this.pressedButton.BackColor = SystemColors.Info;
         }
     }
 }
