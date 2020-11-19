@@ -76,6 +76,12 @@
       <DependentUpon>QuestionScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Quiz.cs" />
+    <Compile Include="victoryScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="victoryScreen.Designer.cs">
+      <DependentUpon>victoryScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="endScreen.resx">
       <DependentUpon>endScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="QuestionScreen.resx">
       <DependentUpon>QuestionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="victoryScreen.resx">
+      <DependentUpon>victoryScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
