@@ -30,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameButton = new System.Windows.Forms.Button();
@@ -55,7 +56,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Location = new System.Drawing.Point(608, 363);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(103, 20);
             this.usernameTextBox.TabIndex = 2;
@@ -77,7 +78,7 @@
             this.highScores_listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.highScores_listBox.FormattingEnabled = true;
             this.highScores_listBox.Location = new System.Drawing.Point(1066, 161);
-            this.highScores_listBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.highScores_listBox.Margin = new System.Windows.Forms.Padding(2);
             this.highScores_listBox.Name = "highScores_listBox";
             this.highScores_listBox.Size = new System.Drawing.Size(148, 186);
             this.highScores_listBox.TabIndex = 4;
@@ -111,7 +112,7 @@
             this.diffLabel.Location = new System.Drawing.Point(807, 491);
             this.diffLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.diffLabel.Name = "diffLabel";
-            this.diffLabel.Size = new System.Drawing.Size(159, 17);
+            this.diffLabel.Size = new System.Drawing.Size(120, 13);
             this.diffLabel.TabIndex = 8;
             this.diffLabel.Text = "Please select a difficulty";
             this.diffLabel.Visible = false;
@@ -122,7 +123,7 @@
             this.easyRadio.Location = new System.Drawing.Point(719, 545);
             this.easyRadio.Margin = new System.Windows.Forms.Padding(4);
             this.easyRadio.Name = "easyRadio";
-            this.easyRadio.Size = new System.Drawing.Size(60, 21);
+            this.easyRadio.Size = new System.Drawing.Size(48, 17);
             this.easyRadio.TabIndex = 9;
             this.easyRadio.TabStop = true;
             this.easyRadio.Text = "Easy";
@@ -135,7 +136,7 @@
             this.mediumRadio.Location = new System.Drawing.Point(847, 545);
             this.mediumRadio.Margin = new System.Windows.Forms.Padding(4);
             this.mediumRadio.Name = "mediumRadio";
-            this.mediumRadio.Size = new System.Drawing.Size(78, 21);
+            this.mediumRadio.Size = new System.Drawing.Size(62, 17);
             this.mediumRadio.TabIndex = 10;
             this.mediumRadio.TabStop = true;
             this.mediumRadio.Text = "Medium";
@@ -148,7 +149,7 @@
             this.hardRadio.Location = new System.Drawing.Point(985, 545);
             this.hardRadio.Margin = new System.Windows.Forms.Padding(4);
             this.hardRadio.Name = "hardRadio";
-            this.hardRadio.Size = new System.Drawing.Size(60, 21);
+            this.hardRadio.Size = new System.Drawing.Size(48, 17);
             this.hardRadio.TabIndex = 11;
             this.hardRadio.TabStop = true;
             this.hardRadio.Text = "Hard";
@@ -160,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SoftwareEngineeringApp.Properties.Resources.New_Background___Title;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.hardRadio);
             this.Controls.Add(this.mediumRadio);
             this.Controls.Add(this.easyRadio);
@@ -171,6 +172,7 @@
             this.Controls.Add(this.usernameButton);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Form1";

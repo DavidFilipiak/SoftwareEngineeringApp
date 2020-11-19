@@ -19,9 +19,9 @@ namespace SoftwareEngineeringApp
         private static int time = 20;
         Question currentQuestion;
         private int gameDiff;
-
+        Button pressedButton = new Button();
         private List<Question> usedQuestions = new List<Question>();
-     
+
 
         public QuestionScreen(int gameDifficulty)
         {
@@ -44,7 +44,7 @@ namespace SoftwareEngineeringApp
             SetTimer(20);
             timer.Start();
 
-            switch(difficulty)
+            switch (difficulty)
             {
                 case 1:
                     currentQuestion = GetRandomQuestion(Quiz.questionsLvl1);
@@ -122,25 +122,38 @@ namespace SoftwareEngineeringApp
         private void optionA_button_Click(object sender, EventArgs e)
         {
             EvaluateAnswer('A');
+
+            this.pressedButton = this.optionA_button;
             this.ActiveControl = null;  //unfocuses the button
+            this.ColourChangeIncorrect(this.pressedButton);
+            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void optionB_button_Click(object sender, EventArgs e)
         {
             EvaluateAnswer('B');
+            this.pressedButton = this.optionB_button;
             this.ActiveControl = null;  //unfocuses the button
+            this.ColourChangeIncorrect(this.pressedButton);
+            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void optionC_button_Click(object sender, EventArgs e)
         {
             EvaluateAnswer('C');
+            this.pressedButton = this.optionC_button;
             this.ActiveControl = null;  //unfocuses the button
+            this.ColourChangeIncorrect(this.pressedButton);
+            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void optionD_button_Click(object sender, EventArgs e)
         {
             EvaluateAnswer('D');
+            this.pressedButton = this.optionD_button;
             this.ActiveControl = null;  //unfocuses the button
+            this.ColourChangeIncorrect(this.pressedButton);
+            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -148,7 +161,7 @@ namespace SoftwareEngineeringApp
             time--;
             timer_label.Text = time.ToString();
 
-            if(time == 0)
+            if (time == 0)
             {
                 AnsweredIncorrectly();
             }
@@ -157,14 +170,17 @@ namespace SoftwareEngineeringApp
         private void AnsweredIncorrectly()
         {
             timer.Stop();
+            ColourChangeIncorrect(this.pressedButton);
             SaveScore();
             OpenMainScreen();
         }
 
         private void AnsweredCorrectly()
         {
+
             timer.Stop();
-            userScore+=5;
+            ColourChangeCorrect(this.pressedButton);
+            userScore += 5;
             questionNumber++;
             ChooseQuestion(this.gameDiff, this.questionNumber);
         }
@@ -214,5 +230,27 @@ namespace SoftwareEngineeringApp
             mainForm.ShowDialog();
             this.Close();
         }
+
+        private void ColourChangeCorrect(Button button)
+        {
+            button.BackColor = Color.Green;
+            button.Update();
+
+           /*if (AnsweredCorrectly == true)
+            {
+                Control.BackColour == SystemColors.;
+            }*/
+        }
+    }
+
+    private void ColourChangeIncorrect(Button button)
+    {
+        button.BackColor = Color.Red;
+        button.Update();
+
+        /*if (AnsweredIncorrectly == false)
+         {
+             Control.BackColour == SystemColors.;
+         }*/
     }
 }

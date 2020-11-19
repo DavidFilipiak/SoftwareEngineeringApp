@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionScreen));
             this.optionA_button = new System.Windows.Forms.Button();
             this.optionB_button = new System.Windows.Forms.Button();
             this.optionC_button = new System.Windows.Forms.Button();
@@ -43,10 +44,10 @@
             // 
             // optionA_button
             // 
-            this.optionA_button.Location = new System.Drawing.Point(12, 349);
-            this.optionA_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.optionA_button.Location = new System.Drawing.Point(9, 284);
+            this.optionA_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.optionA_button.Name = "optionA_button";
-            this.optionA_button.Size = new System.Drawing.Size(600, 130);
+            this.optionA_button.Size = new System.Drawing.Size(450, 106);
             this.optionA_button.TabIndex = 0;
             this.optionA_button.Text = "button1";
             this.optionA_button.UseVisualStyleBackColor = true;
@@ -54,10 +55,10 @@
             // 
             // optionB_button
             // 
-            this.optionB_button.Location = new System.Drawing.Point(652, 349);
-            this.optionB_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.optionB_button.Location = new System.Drawing.Point(489, 284);
+            this.optionB_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.optionB_button.Name = "optionB_button";
-            this.optionB_button.Size = new System.Drawing.Size(600, 130);
+            this.optionB_button.Size = new System.Drawing.Size(450, 106);
             this.optionB_button.TabIndex = 1;
             this.optionB_button.Text = "button2";
             this.optionB_button.UseVisualStyleBackColor = true;
@@ -65,10 +66,10 @@
             // 
             // optionC_button
             // 
-            this.optionC_button.Location = new System.Drawing.Point(12, 494);
-            this.optionC_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.optionC_button.Location = new System.Drawing.Point(9, 401);
+            this.optionC_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.optionC_button.Name = "optionC_button";
-            this.optionC_button.Size = new System.Drawing.Size(600, 130);
+            this.optionC_button.Size = new System.Drawing.Size(450, 106);
             this.optionC_button.TabIndex = 2;
             this.optionC_button.Text = "button3";
             this.optionC_button.UseVisualStyleBackColor = true;
@@ -76,10 +77,10 @@
             // 
             // optionD_button
             // 
-            this.optionD_button.Location = new System.Drawing.Point(652, 494);
-            this.optionD_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.optionD_button.Location = new System.Drawing.Point(489, 401);
+            this.optionD_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.optionD_button.Name = "optionD_button";
-            this.optionD_button.Size = new System.Drawing.Size(600, 130);
+            this.optionD_button.Size = new System.Drawing.Size(450, 106);
             this.optionD_button.TabIndex = 3;
             this.optionD_button.Text = "button4";
             this.optionD_button.UseVisualStyleBackColor = true;
@@ -89,18 +90,20 @@
             // 
             this.question_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.question_label.AutoSize = true;
-            this.question_label.Location = new System.Drawing.Point(588, 275);
+            this.question_label.Location = new System.Drawing.Point(441, 223);
+            this.question_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.question_label.Name = "question_label";
-            this.question_label.Size = new System.Drawing.Size(95, 17);
+            this.question_label.Size = new System.Drawing.Size(71, 13);
             this.question_label.TabIndex = 4;
             this.question_label.Text = "question here";
             // 
             // timer_label
             // 
             this.timer_label.AutoSize = true;
-            this.timer_label.Location = new System.Drawing.Point(1228, 9);
+            this.timer_label.Location = new System.Drawing.Point(921, 7);
+            this.timer_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.timer_label.Name = "timer_label";
-            this.timer_label.Size = new System.Drawing.Size(24, 17);
+            this.timer_label.Size = new System.Drawing.Size(19, 13);
             this.timer_label.TabIndex = 6;
             this.timer_label.Text = "20";
             // 
@@ -111,37 +114,36 @@
             // score_label
             // 
             this.score_label.AutoSize = true;
-            this.score_label.Location = new System.Drawing.Point(16, 11);
-            this.score_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.score_label.Location = new System.Drawing.Point(12, 9);
             this.score_label.Name = "score_label";
-            this.score_label.Size = new System.Drawing.Size(49, 17);
+            this.score_label.Size = new System.Drawing.Size(38, 13);
             this.score_label.TabIndex = 7;
             this.score_label.Text = "Score:";
             // 
             // questionNumber_label
             // 
             this.questionNumber_label.AutoSize = true;
-            this.questionNumber_label.Location = new System.Drawing.Point(588, 9);
+            this.questionNumber_label.Location = new System.Drawing.Point(441, 7);
+            this.questionNumber_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.questionNumber_label.Name = "questionNumber_label";
-            this.questionNumber_label.Size = new System.Drawing.Size(114, 17);
+            this.questionNumber_label.Size = new System.Drawing.Size(85, 13);
             this.questionNumber_label.TabIndex = 5;
             this.questionNumber_label.Text = "question number";
             // 
             // labelDiff
             // 
             this.labelDiff.AutoSize = true;
-            this.labelDiff.Location = new System.Drawing.Point(576, 655);
-            this.labelDiff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDiff.Location = new System.Drawing.Point(432, 532);
             this.labelDiff.Name = "labelDiff";
-            this.labelDiff.Size = new System.Drawing.Size(126, 17);
+            this.labelDiff.Size = new System.Drawing.Size(96, 13);
             this.labelDiff.TabIndex = 7;
             this.labelDiff.Text = "Selected difficulty: ";
             // 
             // QuestionScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(948, 553);
             this.Controls.Add(this.labelDiff);
             this.Controls.Add(this.score_label);
             this.Controls.Add(this.timer_label);
@@ -151,7 +153,8 @@
             this.Controls.Add(this.optionC_button);
             this.Controls.Add(this.optionB_button);
             this.Controls.Add(this.optionA_button);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "QuestionScreen";
             this.Text = "QuestionScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
