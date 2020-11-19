@@ -33,7 +33,6 @@ namespace SoftwareEngineeringApp
            
             this.ActiveControl = null;
             this.gameDiff = gameDifficulty;
-            DisplayGameDifficulty(gameDifficulty);
             userScore = 0;
             timer.Interval = 1000;
             ChooseQuestion(this.gameDiff, this.questionNumber);
@@ -268,27 +267,6 @@ namespace SoftwareEngineeringApp
             }
         }
 
-        private void DisplayGameDifficulty(int difficulty)
-        {
-            string textDiff;
-            if (difficulty == 1)
-            {
-                textDiff = "Easy";
-                labelDiff.Text = "Selected difficulty: " + textDiff;
-            }
-            else if (difficulty == 2)
-            {
-                textDiff = "Medium";
-                labelDiff.Text = "Selected difficulty: " + textDiff;
-            }
-
-            else if (difficulty == 3)
-            {
-                textDiff = "Difficult";
-                labelDiff.Text = "Selected difficulty: " + textDiff;
-            }
-        }
-
         private void SaveScore()
         {
             Quiz.highscores[Quiz.currentUsername] = userScore;
@@ -383,7 +361,8 @@ namespace SoftwareEngineeringApp
 
         private void OnMouseEnterButton1(object sender, EventArgs e)
         {
-            optionA_button.BackColor = Color.LightSeaGreen; //Changes colour of button to Light Sea Green
+            ((Button)sender).BackColor = Color.LightSeaGreen;
+           // optionA_button.BackColor = Color.LightSeaGreen; //Changes colour of button to Light Sea Green
         }
         private void OnMouseLeaveButton1(object sender, EventArgs e)
         {
