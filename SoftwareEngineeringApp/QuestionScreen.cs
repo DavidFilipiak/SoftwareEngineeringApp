@@ -19,7 +19,7 @@ namespace SoftwareEngineeringApp
         private static int time = 20;
         Question currentQuestion;
         private int gameDiff;
-        private bool gameWon;
+        private bool gameFinished;
 
         private List<Question> usedQuestions = new List<Question>();
      
@@ -225,21 +225,21 @@ namespace SoftwareEngineeringApp
 
             if (userScore >= 150 && gameDiff == 1)
             {
-                gameWon = true;
+                gameFinished = true;
                 WinGame();
             }
             else if (userScore >= 250 && gameDiff == 2)
             {
-                gameWon = true;
+                gameFinished = true;
                 WinGame();
             }
             else if (userScore >= 400 && gameDiff == 3)
             {
-                gameWon = true;
+                gameFinished = true;
                 WinGame();
             }
             else {
-                gameWon = false;
+                this.gameFinished = false;
             }
         }
 
