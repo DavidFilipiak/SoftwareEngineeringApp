@@ -259,10 +259,10 @@
             this.Controls.Add(this.timer_label);
             this.Controls.Add(this.questionNumber_label);
             this.Controls.Add(this.question_label);
-            this.Controls.Add(this.optionD_button);
-            this.Controls.Add(this.optionC_button);
-            this.Controls.Add(this.optionB_button);
-            this.Controls.Add(this.optionA_button);
+            this.tableLayoutPanel1.Controls.Add(this.optionD_button,1,1);
+            this.tableLayoutPanel1.Controls.Add(this.optionC_button,0,1);
+            this.tableLayoutPanel1.Controls.Add(this.optionB_button,1,0);
+            this.tableLayoutPanel1.Controls.Add(this.optionA_button,0,0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

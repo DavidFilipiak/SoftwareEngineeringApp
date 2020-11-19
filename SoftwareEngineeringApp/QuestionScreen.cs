@@ -22,6 +22,7 @@ namespace SoftwareEngineeringApp
         private int gameDiff;
         Button pressedButton = new Button();
         private List<Question> usedQuestions = new List<Question>();
+        Timer timer2 = new Timer();
 
 
         public QuestionScreen(int gameDifficulty)
@@ -122,39 +123,30 @@ namespace SoftwareEngineeringApp
 
         private void optionA_button_Click(object sender, EventArgs e)
         {
-            EvaluateAnswer('A');
-
             this.pressedButton = this.optionA_button;
+            EvaluateAnswer('A');
             this.ActiveControl = null;  //unfocuses the button
-            this.ColourChangeIncorrect(this.pressedButton);
-            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void optionB_button_Click(object sender, EventArgs e)
         {
-            EvaluateAnswer('B');
             this.pressedButton = this.optionB_button;
+            EvaluateAnswer('B');
             this.ActiveControl = null;  //unfocuses the button
-            this.ColourChangeIncorrect(this.pressedButton);
-            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void optionC_button_Click(object sender, EventArgs e)
         {
-            EvaluateAnswer('C');
             this.pressedButton = this.optionC_button;
+            EvaluateAnswer('C');
             this.ActiveControl = null;  //unfocuses the button
-            this.ColourChangeIncorrect(this.pressedButton);
-            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void optionD_button_Click(object sender, EventArgs e)
         {
-            EvaluateAnswer('D');
             this.pressedButton = this.optionD_button;
+            EvaluateAnswer('D');
             this.ActiveControl = null;  //unfocuses the button
-            this.ColourChangeIncorrect(this.pressedButton);
-            this.ColourChangeCorrect(this.pressedButton);
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -316,20 +308,24 @@ namespace SoftwareEngineeringApp
             button.BackColor = Color.Green;
             button.Update();
 
-           /*if (AnsweredCorrectly == true)
-            {
-                Control.BackColour == SystemColors.;
-            }*/
+            timer2.Tick += new EventHandler(timer2_Tick);
+            timer2.Interval = 200;
+            timer2.Start();
         }
         private void ColourChangeIncorrect(Button button)
         {
             button.BackColor = Color.Red;
             button.Update();
 
-            /*if (AnsweredIncorrectly == false)
-             {
-                 Control.BackColour == SystemColors.;
-             }*/
+            timer2.Tick += new EventHandler(timer2_Tick);
+            timer2.Interval = 200;
+            timer2.Start();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Stop();
+            this.pressedButton.BackColor = SystemColors.Info;
         }
     }
 }
