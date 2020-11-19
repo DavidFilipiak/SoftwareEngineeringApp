@@ -9,6 +9,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
 
 namespace SoftwareEngineeringApp
 {
@@ -165,6 +167,7 @@ namespace SoftwareEngineeringApp
         {
             timer.Stop();
             ChangeButtonColour(this.pressedButton, false);
+            PlaySound(false);
             CreateTimer2();
         }
 
@@ -174,7 +177,24 @@ namespace SoftwareEngineeringApp
             ChangeButtonColour(this.pressedButton, true);
             userScore += 5;
             questionNumber++;
+            PlaySound(true);
             CreateTimer2();
+        }
+
+        private void PlaySound(bool correctAnswer)
+        {
+            Stream stream = null;
+            if (correctAnswer)
+            {
+                stream = Properties.Resources.correctBell;
+            }
+            else
+            {
+                stream = Properties.Resources.wrongAns;
+            }
+
+            SoundPlayer sound = new SoundPlayer(stream);
+            sound.PlaySync();            
         }
 
         private void ChangeButtonColour(Button button, bool correctAnswer)
@@ -210,7 +230,7 @@ namespace SoftwareEngineeringApp
 
             if (this.correctAnswerGiven)
             {
-                if(this.userScore == 10)
+                if(this.userScore == 100)
                 {
                     WinGame();
                 }
@@ -359,6 +379,39 @@ namespace SoftwareEngineeringApp
             victoryScreen winForm = new victoryScreen();
             winForm.ShowDialog();
             this.Close();           
+        }
+
+        private void OnMouseEnterButton1(object sender, EventArgs e)
+        {
+            optionA_button.BackColor = Color.LightSeaGreen; //Changes colour of button to Light Sea Green
+        }
+        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        {
+            optionA_button.BackColor = SystemColors.Info; //Reverts the colour to the original grey
+        }
+        private void OnMouseEnterButton2(object sender, EventArgs e) //Changes colour of button to Light Sea Green
+        {
+            optionB_button.BackColor = Color.LightSeaGreen; ;
+        }
+        private void OnMouseLeaveButton2(object sender, EventArgs e) //Reverts the colour to the original grey
+        {
+            optionB_button.BackColor = SystemColors.Info;
+        }
+        private void OnMouseEnterButton3(object sender, EventArgs e) //Changes colour of button to Light Sea Green
+        {
+            optionC_button.BackColor = Color.LightSeaGreen; ;
+        }
+        private void OnMouseLeaveButton3(object sender, EventArgs e) //Reverts the colour to the original grey
+        {
+            optionC_button.BackColor = SystemColors.Info;
+        }
+        private void OnMouseEnterButton4(object sender, EventArgs e) //Changes colour of button to Light Sea Green
+        {
+            optionD_button.BackColor = Color.LightSeaGreen; ;
+        }
+        private void OnMouseLeaveButton4(object sender, EventArgs e) //Reverts the colour to the original grey
+        {
+            optionD_button.BackColor = SystemColors.Info;
         }
     }
 }

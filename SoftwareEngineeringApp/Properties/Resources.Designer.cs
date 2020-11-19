@@ -61,6 +61,15 @@ namespace SoftwareEngineeringApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream correctBell {
+            get {
+                return ResourceManager.GetStream("correctBell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to david 15
         ///moon 35.
         /// </summary>
@@ -137,6 +146,15 @@ namespace SoftwareEngineeringApp.Properties {
         internal static string questions {
             get {
                 return ResourceManager.GetString("questions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream wrongAns {
+            get {
+                return ResourceManager.GetStream("wrongAns", resourceCulture);
             }
         }
     }

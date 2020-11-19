@@ -134,7 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="endScreen.png" />
+    <Resource Include="Resources\correctBell.wav" />
     <Content Include="Resources\endScreen.png" />
+    <Resource Include="Resources\wrongAns.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -64,6 +64,8 @@
             this.optionA_button.Text = "button1";
             this.optionA_button.UseVisualStyleBackColor = false;
             this.optionA_button.Click += new System.EventHandler(this.optionA_button_Click);
+            this.optionA_button.MouseEnter += OnMouseEnterButton1;
+            this.optionA_button.MouseLeave += OnMouseLeaveButton1;
             // 
             // optionB_button
             // 
@@ -80,6 +82,8 @@
             this.optionB_button.Text = "button2";
             this.optionB_button.UseVisualStyleBackColor = false;
             this.optionB_button.Click += new System.EventHandler(this.optionB_button_Click);
+            this.optionB_button.MouseEnter += OnMouseEnterButton2;
+            this.optionB_button.MouseLeave += OnMouseLeaveButton2;
             // 
             // optionC_button
             // 
@@ -96,6 +100,8 @@
             this.optionC_button.Text = "button3";
             this.optionC_button.UseVisualStyleBackColor = false;
             this.optionC_button.Click += new System.EventHandler(this.optionC_button_Click);
+            this.optionC_button.MouseEnter += OnMouseEnterButton3;
+            this.optionC_button.MouseLeave += OnMouseLeaveButton3;
             // 
             // optionD_button
             // 
@@ -112,6 +118,8 @@
             this.optionD_button.Text = "button4";
             this.optionD_button.UseVisualStyleBackColor = false;
             this.optionD_button.Click += new System.EventHandler(this.optionD_button_Click);
+            this.optionD_button.MouseEnter += OnMouseEnterButton4;
+            this.optionD_button.MouseLeave += OnMouseLeaveButton4;
             // 
             // question_label
             // 
