@@ -12,8 +12,8 @@ namespace SoftwareEngineeringApp
         private string question;
         private string[] options;
         private char correctAnswer;
-        
-        
+
+
 
         public string QuestionWording
         {
@@ -56,9 +56,12 @@ namespace SoftwareEngineeringApp
             {
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
+
     }
-
-
 }
+
