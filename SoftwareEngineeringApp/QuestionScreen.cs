@@ -36,6 +36,9 @@ namespace SoftwareEngineeringApp
             userScore = 0;
             timer.Interval = 1000;
             ChooseQuestion(this.gameDiff, this.questionNumber);
+
+            timer2.Tick += new EventHandler(timer2_Tick);
+            timer2.Interval = 500;
         }
 
         private void QuestionScreen_FormClosing(object sender, EventArgs e)
@@ -113,8 +116,7 @@ namespace SoftwareEngineeringApp
             }
             else
             {
-                SaveScore();
-                gameOver();
+                WinGame();
             }
         }
 
@@ -167,7 +169,7 @@ namespace SoftwareEngineeringApp
             timer.Stop();
             ChangeButtonColour(this.pressedButton, false);
             PlaySound(false);
-            CreateTimer2();
+            timer2.Start();
         }
 
         private void AnsweredCorrectly()
@@ -177,7 +179,7 @@ namespace SoftwareEngineeringApp
             userScore += 5;
             questionNumber++;
             PlaySound(true);
-            CreateTimer2();
+            timer2.Start();
         }
 
         private void PlaySound(bool correctAnswer)
@@ -215,28 +217,13 @@ namespace SoftwareEngineeringApp
             }
         }
 
-        private void CreateTimer2()
-        {
-            timer2.Tick += new EventHandler(timer2_Tick);
-            timer2.Interval = 500;
-            timer2.Start();
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Stop();
             this.pressedButton.BackColor = SystemColors.Info;
-
+            timer2.Stop();
             if (this.correctAnswerGiven)
             {
-                if(this.userScore == 100)
-                {
-                    WinGame();
-                }
-                else
-                {
-                    ChooseQuestion(this.gameDiff, this.questionNumber);
-                }
+                ChooseQuestion(this.gameDiff, this.questionNumber);
             }
             else
             {
@@ -361,8 +348,8 @@ namespace SoftwareEngineeringApp
 
         private void OnMouseEnterButton1(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.LightSeaGreen;
-           // optionA_button.BackColor = Color.LightSeaGreen; //Changes colour of button to Light Sea Green
+            //((Button)sender).BackColor = Color.LightSeaGreen;
+            optionA_button.BackColor = Color.LightSeaGreen; //Changes colour of button to Light Sea Green
         }
         private void OnMouseLeaveButton1(object sender, EventArgs e)
         {
