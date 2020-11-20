@@ -51,8 +51,6 @@ namespace SoftwareEngineeringApp
                 listBox2.Items.Add(usernameHighscore.Key + "\t" + usernameHighscore.Value);
             }
         }
-
-
     }
 }
 
