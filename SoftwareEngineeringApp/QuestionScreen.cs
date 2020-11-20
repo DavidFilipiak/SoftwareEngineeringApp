@@ -379,5 +379,15 @@ namespace SoftwareEngineeringApp
         {
             optionD_button.BackColor = SystemColors.Info;
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void QuestionScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -192,9 +192,9 @@
             this.helplinesGroupbox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.helplinesGroupbox.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helplinesGroupbox.Location = new System.Drawing.Point(4, 727);
-            this.helplinesGroupbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.helplinesGroupbox.Margin = new System.Windows.Forms.Padding(4);
             this.helplinesGroupbox.Name = "helplinesGroupbox";
-            this.helplinesGroupbox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.helplinesGroupbox.Padding = new System.Windows.Forms.Padding(4);
             this.helplinesGroupbox.Size = new System.Drawing.Size(1677, 107);
             this.helplinesGroupbox.TabIndex = 8;
             this.helplinesGroupbox.TabStop = false;
@@ -204,7 +204,7 @@
             // 
             this.helpNewQbutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.helpNewQbutton.Location = new System.Drawing.Point(1292, 26);
-            this.helpNewQbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.helpNewQbutton.Margin = new System.Windows.Forms.Padding(4);
             this.helpNewQbutton.Name = "helpNewQbutton";
             this.helpNewQbutton.Size = new System.Drawing.Size(275, 70);
             this.helpNewQbutton.TabIndex = 2;
@@ -216,7 +216,7 @@
             // 
             this.helpStopTimebutton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.helpStopTimebutton.Location = new System.Drawing.Point(665, 26);
-            this.helpStopTimebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.helpStopTimebutton.Margin = new System.Windows.Forms.Padding(4);
             this.helpStopTimebutton.Name = "helpStopTimebutton";
             this.helpStopTimebutton.Size = new System.Drawing.Size(293, 70);
             this.helpStopTimebutton.TabIndex = 1;
@@ -228,7 +228,7 @@
             // 
             this.help5050button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.help5050button.Location = new System.Drawing.Point(103, 26);
-            this.help5050button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.help5050button.Margin = new System.Windows.Forms.Padding(4);
             this.help5050button.Name = "help5050button";
             this.help5050button.Size = new System.Drawing.Size(267, 71);
             this.help5050button.TabIndex = 0;
@@ -251,7 +251,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -261,6 +261,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1685, 838);
             this.tableLayoutPanel1.TabIndex = 9;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -277,7 +278,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1679, 100);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
@@ -287,8 +288,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "QuestionScreen";
@@ -296,6 +300,7 @@
             this.Text = "QuestionScreen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuestionScreen_FormClosing);
+            this.Load += new System.EventHandler(this.QuestionScreen_Load);
             this.helplinesGroupbox.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
